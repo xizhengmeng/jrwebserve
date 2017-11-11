@@ -15,7 +15,10 @@ Including another URLconf
 """
 from django.conf.urls import url
 from django.contrib import admin
+from jrweb import views as jrviews  # new
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
+    url(r'test', jrviews.test),
+    # url(r'^$', jrviews.home,name='home'),  # new
 ]
