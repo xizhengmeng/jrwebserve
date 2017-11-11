@@ -4,7 +4,7 @@ from __future__ import unicode_literals
 import os,datetime,json
 from django.http import HttpResponse
 from django.shortcuts import render
-from CoreFoundation.CoreSearch import searchComment
+from CoreFunction.CoreSearch import searchComment
 
 # Create your views here.
 
