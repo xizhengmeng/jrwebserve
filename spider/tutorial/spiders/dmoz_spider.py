@@ -7,7 +7,7 @@ class AppstoreSpider(scrapy.Spider):
     allowed_domains = ["itunes.apple.com"]
     start_urls = []
     start = 0
-    for i in range(10,12):
+    for i in range(0,200):
         end = start + 100
         endString = '%d' % end
         startString = '%d' % start
