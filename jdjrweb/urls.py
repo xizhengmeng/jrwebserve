@@ -20,5 +20,6 @@ from jrweb import views as jrviews  # new
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'test', jrviews.test),
+    url(r'^jdjrsearchcomment/', jrviews.searchCommentFunction)
     # url(r'^$', jrviews.home,name='home'),  # new
 ]
