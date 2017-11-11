@@ -1,16 +1,18 @@
-#coding:utf-8
-import os,time,json
+# -*- coding: utf-8 -*-
+
+import os, time, json ,sys
 from pymongo import MongoClient
 import re
 
 reload(sys)
-sys.setdefaultencoding( "utf-8" )
+sys.setdefaultencoding("utf-8")
 
-connection = pymongo.MongoClient("localhost",27017)
-mydb = connection.Spider # new a database
-comment = mydb.Comment # new a table
+connection = MongoClient("localhost", 27017)
+mydb = connection.Spider  # new a database
+comment = mydb.Comment  # new a table
 
-def searchComment(searchkey,sorekey,pageindex,pagesize):
+
+def searchComment(searchkey, sorekey, pageindex, pagesize):
     if len(searchkey) == 0:
         return ''
 
@@ -22,10 +24,10 @@ def searchComment(searchkey,sorekey,pageindex,pagesize):
 
     if type(pageindex) != type(0):
         return 'pageindex should be int'
- 
+
     skipnumber = pagesize * pageindex
 
-    dbs = comment.find({'body':re.compile(searchkey)}).sort({sorekey:1}).limit(pagesize).skip(skipnumber)
+    dbs = comment.find({'body': re.compile(searchkey)}).sort({sorekey: 1}).limit(pagesize).skip(skipnumber)
     # dbs = comment.find({'body':re.compile('白条')}).sort([('date',1)]).limit(20).skip(10)
 
     list = []
@@ -40,6 +42,6 @@ def searchComment(searchkey,sorekey,pageindex,pagesize):
         dic['time'] = item.get('time')
 
         list.append(dic)
-     liststring = json.dumps(list)
-     return liststring   
+    liststring = json.dumps(list)
+    return liststring
 

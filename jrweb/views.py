@@ -1,11 +1,11 @@
 # -*- coding: utf-8 -*-
 
 from __future__ import unicode_literals
-import os,datetime,json
-from django.http import HttpResponse
-from django.shortcuts import render
-from CoreFunction.CoreSearch import searchComment
 
+from django.http import HttpResponse
+
+from corefunction.coresearch import searchComment
+# from CoreFunction.CoreSearch import searchComment
 # Create your views here.
 
 def test(request):
