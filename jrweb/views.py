@@ -12,8 +12,8 @@ def test(request):
     return HttpResponse("ceshiceshi")
 
 def searchCommentFunction(request):
-    postObj = request.POST()
-    getObj = request.GET()
+    postObj = request.POST.copy()
+    getObj = request.GET..copy()
 
     searchkey = ''
     sorekey = ''
