@@ -3,6 +3,9 @@
 import os, time, json ,sys
 from pymongo import MongoClient
 import re
+import logging
+#
+logger = logging.getLogger('sourceDns.webdns.views')
 
 reload(sys)
 sys.setdefaultencoding("utf-8")
@@ -27,6 +30,9 @@ def searchComment(searchkey, sorekey, pageindex, pagesize):
 
     if type(pageindex) == type('0'):
        pageindex = int(pageindex,10)
+
+    logger.info(type(pageindex))
+    logger.info(type(pagesize))
 
     if type(pageindex) != type(0):
         return 'pageindex type wrong'
