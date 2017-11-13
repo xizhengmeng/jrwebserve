@@ -14,7 +14,7 @@ comment = mydb.Comment  # new a table
 
 def searchComment(searchkey, sorekey, pageindex, pagesize):
     if type(searchkey) == type(None):
-        return ''
+        return 'input searchkey'
 
     if type(sorekey) == type(None):
         sorekey = 'date'
@@ -23,11 +23,11 @@ def searchComment(searchkey, sorekey, pageindex, pagesize):
         pagesize = 10
 
     if type(pageindex) != type(0):
-        return 'pageindex should be int'
+       pageindex = int(pageindex,10)
 
     skipnumber = pagesize * pageindex
 
-    dbs = comment.find({'body': re.compile(searchkey)}).sort({sorekey: 1}).limit(pagesize).skip(skipnumber)
+    dbs = comment.find({'body': re.compile(searchkey)}).sort([('date',1)]).limit(pagesize).skip(skipnumber)
     # dbs = comment.find({'body':re.compile('白条')}).sort([('date',1)]).limit(20).skip(10)
 
     list = []

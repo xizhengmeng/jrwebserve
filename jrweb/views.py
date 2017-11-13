@@ -4,8 +4,8 @@ from __future__ import unicode_literals
 
 from django.http import HttpResponse
 
-from corefunction.coresearch import searchComment
-# from CoreFunction.CoreSearch import searchComment
+# from corefunction.coresearch import searchComment
+from CoreFunction.CoreSearch import searchComment
 # Create your views here.
 
 def test(request):
