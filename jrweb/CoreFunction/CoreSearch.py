@@ -25,11 +25,14 @@ def searchComment(searchkey, sorekey, pageindex, pagesize):
     if type(pagesize) == type(None):
         pagesize = 10
     else:
-        if type(pageindex) == type(u'0'):
+        if type(pagesize) == type(u'0'):
            pagesize = int(pagesize, 10)
 
-    if type(pageindex) == type(u'0'):
-       pageindex = int(pageindex,10)
+    if type(pageindex) == type(None):
+        pageindex = 1
+    else:
+       if type(pageindex) == type(u'0'):
+          pageindex = int(pageindex,10)
 
     logger.info(type(pageindex))
     logger.info(type(pagesize))
