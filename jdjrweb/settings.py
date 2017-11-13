@@ -163,7 +163,7 @@ LOGGING = {
         'request_handler': {
             'level':'DEBUG',
             'class':'logging.handlers.RotatingFileHandler',
-            'filename': '/sourceDns/log/script.log',
+            'filename': '/root/jdjr/datalog/defealt_log',
             'maxBytes': 1024*1024*5,
             'backupCount': 5,
             'formatter':'standard',
@@ -171,7 +171,7 @@ LOGGING = {
         'scprits_handler': {
             'level':'DEBUG',
             'class':'logging.handlers.RotatingFileHandler',
-            'filename':'/sourceDns/log/script.log',
+            'filename':'/root/jdjr/datalog/defealt_log',
             'maxBytes': 1024*1024*5,
             'backupCount': 5,
             'formatter':'standard',
