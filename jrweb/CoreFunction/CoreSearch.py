@@ -12,7 +12,8 @@ sys.setdefaultencoding("utf-8")
 
 connection = MongoClient("localhost", 27017)
 mydb = connection.Spider  # new a database
-comment = mydb.Comment  # new a table
+#comment = mydb.Comment  # new a table
+clencomment = mydb.CleanComment
 
 
 def searchComment(searchkey, sorekey, pageindex, pagesize):
@@ -45,7 +46,7 @@ def searchComment(searchkey, sorekey, pageindex, pagesize):
 
     skipnumber = pagesize * pageindex
 
-    dbs = comment.find({'body': re.compile(searchkey)}).sort([('date',-1)]).limit(pagesize).skip(skipnumber)
+    dbs = clencomment.find({'body': re.compile(searchkey)}).sort([('date',-1)]).limit(pagesize).skip(skipnumber)
 
     list = []
     for item in dbs:

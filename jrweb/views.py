@@ -40,5 +40,4 @@ def searchCommentFunction(request):
        return HttpResponse('no request body')
 
     searchResultString = searchComment(searchkey,sorekey,pageindex,pagesize)
-    logger.info(searchResultString)
     return HttpResponse(searchResultString)
