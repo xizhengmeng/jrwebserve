@@ -22,14 +22,16 @@ def searchCommentFunction(request):
     pageindex = 0
     pagesize = 0
 
-    logger.info("hello, world")
-
     if request.method == 'POST':
+       logger.info('POST')
+       logger.info(request.POST.copy())
        searchkey = request.POST.get('searchkey')
        sorekey = request.POST.get('sorekey')
        pageindex = request.POST.get('pageindex')
        pagesize = request.POST.get('pagesize')
     elif request.method == 'GET':
+       logger.info('GET')
+       logger.info(request.GET.copy())
        searchkey = request.GET.get('searchkey')
        sorekey = request.GET.get('sorekey')
        pageindex = request.GET.get('pageindex')
@@ -38,5 +40,5 @@ def searchCommentFunction(request):
        return HttpResponse('no request body')
 
     searchResultString = searchComment(searchkey,sorekey,pageindex,pagesize)
-    
+    logger.info(searchResultString)
     return HttpResponse(searchResultString)
