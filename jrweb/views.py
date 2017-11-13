@@ -28,6 +28,7 @@ def searchCommentFunction(request):
        sorekey = request.POST.get('sorekey')
        pageindex = request.POST.get('pageindex')
        pagesize = request.POST.get('pagesize')
+       logger.info(request.POST())
        logger.info({'searchkey':searchkey,'soreky':sorekey,'pageindex':pageindex,'pagesize':pagesize})
     elif request.method == 'GET':
        logger.info('GET')
