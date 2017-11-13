@@ -14,7 +14,7 @@ comment = mydb.Comment  # new a table
 
 def searchComment(searchkey, sorekey, pageindex, pagesize):
     if type(searchkey) == type(None):
-        return 'input searchkey'
+        searchkey = ''
 
     if type(sorekey) == type(None):
         sorekey = 'date'
