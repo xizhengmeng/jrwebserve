@@ -28,7 +28,7 @@ def searchCommentFunction(request):
        sorekey = request.POST.get('sorekey')
        pageindex = request.POST.get('pageindex')
        pagesize = request.POST.get('pagesize')
-       logger.info(request.POST())
+       logger.info(request.POST.copy())
        logger.info({'searchkey':searchkey,'soreky':sorekey,'pageindex':pageindex,'pagesize':pagesize})
     elif request.method == 'GET':
        logger.info('GET')
@@ -36,6 +36,7 @@ def searchCommentFunction(request):
        sorekey = request.GET.get('sorekey')
        pageindex = request.GET.get('pageindex')
        pagesize = request.GET.get('pagesize')
+       logger.info(request.GET.copy())
        logger.info({'searchkey': searchkey, 'soreky': sorekey, 'pageindex': pageindex, 'pagesize': pagesize})
     else:
        return HttpResponse('no request body')
