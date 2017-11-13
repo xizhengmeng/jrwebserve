@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="78a40c6a-6360-4c13-bf89-77b6627a81b1" name="Default" comment="" />
+    <list default="true" id="78a40c6a-6360-4c13-bf89-77b6627a81b1" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jrweb/views.py" afterPath="$PROJECT_DIR$/jrweb/views.py" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -14,7 +16,7 @@
       <file leaf-file-name="urls.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/jdjrweb/urls.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
+            <state relative-caret-position="315">
               <caret line="21" column="14" lean-forward="false" selection-start-line="21" selection-start-column="10" selection-end-line="21" selection-end-column="14" />
               <folding>
                 <element signature="e#641#673#0" expanded="true" />
@@ -23,11 +25,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="views.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/jrweb/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="7" column="19" lean-forward="false" selection-start-line="7" selection-start-column="19" selection-end-line="7" selection-end-column="19" />
+            <state relative-caret-position="360">
+              <caret line="33" column="43" lean-forward="false" selection-start-line="33" selection-start-column="43" selection-end-line="33" selection-end-column="43" />
               <folding>
                 <element signature="e#25#64#0" expanded="true" />
               </folding>
@@ -35,10 +37,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="coresearch.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="coresearch.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/jrweb/corefunction/coresearch.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="193">
+            <state relative-caret-position="41">
               <caret line="21" column="34" lean-forward="false" selection-start-line="21" selection-start-column="34" selection-end-line="21" selection-end-column="34" />
               <folding />
             </state>
@@ -62,13 +64,13 @@
       <list>
         <option value="$PROJECT_DIR$/jrweb/templates/home.html" />
         <option value="$PROJECT_DIR$/jdjrweb/urls.py" />
-        <option value="$PROJECT_DIR$/jrweb/views.py" />
         <option value="$PROJECT_DIR$/jrweb/corefunction/coresearch.py" />
+        <option value="$PROJECT_DIR$/jrweb/views.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="86" />
+    <option name="x" value="49" />
     <option name="y" value="23" />
     <option name="width" value="1276" />
     <option name="height" value="863" />
@@ -160,7 +162,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="86" y="23" width="1276" height="863" extended-state="0" />
+    <frame x="49" y="23" width="1276" height="863" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2617504" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -323,16 +325,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/jdjrweb/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="21" column="14" lean-forward="false" selection-start-line="21" selection-start-column="10" selection-end-line="21" selection-end-column="14" />
-          <folding>
-            <element signature="e#641#673#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/jrweb/apps.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -385,21 +377,31 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/jrweb/views.py">
+    <entry file="file://$PROJECT_DIR$/jrweb/corefunction/coresearch.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="19" lean-forward="false" selection-start-line="7" selection-start-column="19" selection-end-line="7" selection-end-column="19" />
+        <state relative-caret-position="41">
+          <caret line="21" column="34" lean-forward="false" selection-start-line="21" selection-start-column="34" selection-end-line="21" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jdjrweb/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="21" column="14" lean-forward="false" selection-start-line="21" selection-start-column="10" selection-end-line="21" selection-end-column="14" />
           <folding>
-            <element signature="e#25#64#0" expanded="true" />
+            <element signature="e#641#673#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/jrweb/corefunction/coresearch.py">
+    <entry file="file://$PROJECT_DIR$/jrweb/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="193">
-          <caret line="21" column="34" lean-forward="false" selection-start-line="21" selection-start-column="34" selection-end-line="21" selection-end-column="34" />
-          <folding />
+        <state relative-caret-position="360">
+          <caret line="33" column="43" lean-forward="false" selection-start-line="33" selection-start-column="43" selection-end-line="33" selection-end-column="43" />
+          <folding>
+            <element signature="e#25#64#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
