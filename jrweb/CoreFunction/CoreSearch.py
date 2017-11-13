@@ -21,6 +21,8 @@ def searchComment(searchkey, sorekey, pageindex, pagesize):
 
     if type(pagesize) == type(None):
         pagesize = 10
+    else:
+        pagesize = int(pagesize, 10)
 
     if type(pageindex) != type(0):
        pageindex = int(pageindex,10)
@@ -33,13 +35,13 @@ def searchComment(searchkey, sorekey, pageindex, pagesize):
     list = []
     for item in dbs:
         dic = {}
-        dic['userReviewId'] = item.get('userReviewId')
-        dic['body'] = item.get('body')
-        dic['date'] = item.get('date')
-        dic['name'] = item.get('name')
-        dic['rating'] = item.get('rating')
+        dic['evaluateId'] = item.get('userReviewId')
+        dic['content'] = item.get('body')
+        dic['time'] = item.get('date')
+        dic['userName'] = item.get('name')
+        dic['score'] = item.get('rating')
         dic['title'] = item.get('title')
-        dic['time'] = item.get('time')
+        dic['scondtime'] = item.get('time')
 
         list.append(dic)
     liststring = json.dumps(list)
