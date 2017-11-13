@@ -13,7 +13,7 @@ def test(request):
 
 def searchCommentFunction(request):
     postObj = request.POST.copy()
-    getObj = request.GET..copy()
+    getObj = request.GET.copy()
 
     searchkey = ''
     sorekey = ''
