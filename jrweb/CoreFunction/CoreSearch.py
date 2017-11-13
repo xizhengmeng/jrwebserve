@@ -22,16 +22,21 @@ def searchComment(searchkey, sorekey, pageindex, pagesize):
     if type(pagesize) == type(None):
         pagesize = 10
     else:
-        if type(pageindex) != type(0):
+        if type(pageindex) == type('0'):
            pagesize = int(pagesize, 10)
 
-    if type(pageindex) != type(0):
+    if type(pageindex) == type('0'):
        pageindex = int(pageindex,10)
+
+    if type(pageindex) != type(0):
+        return 'pageindex type wrong'
+
+    if type(pagesize) != type(0):
+        return 'pagesize type wrong'
 
     skipnumber = pagesize * pageindex
 
     dbs = comment.find({'body': re.compile(searchkey)}).sort([('date',1)]).limit(pagesize).skip(skipnumber)
-    # dbs = comment.find({'body':re.compile('白条')}).sort([('date',1)]).limit(20).skip(10)
 
     list = []
     for item in dbs:
