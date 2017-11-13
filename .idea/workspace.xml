@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e7f50ca6-493a-4bac-b47f-1ed4de801187" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jdjrweb/settings.py" afterPath="$PROJECT_DIR$/jdjrweb/settings.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jrweb/corefunction/CoreSearch.py" afterPath="$PROJECT_DIR$/jrweb/corefunction/CoreSearch.py" />
     </list>
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -36,17 +37,17 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CoreSearch.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="CoreSearch.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/jrweb/corefunction/CoreSearch.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="381">
-              <caret line="52" column="4" lean-forward="false" selection-start-line="52" selection-start-column="4" selection-end-line="52" selection-end-column="4" />
+            <state relative-caret-position="252">
+              <caret line="24" column="35" lean-forward="false" selection-start-line="24" selection-start-column="35" selection-end-line="24" selection-end-column="35" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="settings.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="settings.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/jdjrweb/settings.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="346">
@@ -64,6 +65,7 @@
     <findStrings>
       <find>/sourceDns/log/script.log</find>
       <find>/sourceDns/log</find>
+      <find>APPEND_SLASH</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -72,9 +74,9 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/jrweb/corefunction/CoreSearch.py" />
         <option value="$PROJECT_DIR$/jrweb/views.py" />
         <option value="$PROJECT_DIR$/jdjrweb/settings.py" />
+        <option value="$PROJECT_DIR$/jrweb/corefunction/CoreSearch.py" />
       </list>
     </option>
   </component>
@@ -381,14 +383,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/jrweb/corefunction/CoreSearch.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="381">
-          <caret line="52" column="4" lean-forward="false" selection-start-line="52" selection-start-column="4" selection-end-line="52" selection-end-column="4" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/jrweb/views.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="345">
@@ -406,6 +400,14 @@
           <folding>
             <element signature="e#325#334#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jrweb/corefunction/CoreSearch.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="24" column="35" lean-forward="false" selection-start-line="24" selection-start-column="35" selection-end-line="24" selection-end-column="35" />
+          <folding />
         </state>
       </provider>
     </entry>
