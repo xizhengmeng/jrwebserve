@@ -7,6 +7,8 @@ from django.http import HttpResponse
 # from corefunction.coresearch import searchComment
 from CoreFunction.CoreSearch import searchComment
 # Create your views here.
+import logging
+#
 
 logger = logging.getLogger('sourceDns.webdns.views')
 
