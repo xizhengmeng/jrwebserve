@@ -49,5 +49,6 @@ def searchComment(searchkey, sorekey, pageindex, pagesize):
     resultDic['resultData'] = list
     resultDic['code'] = '0000'
     liststring = json.dumps(resultDic)
+
     return liststring
 

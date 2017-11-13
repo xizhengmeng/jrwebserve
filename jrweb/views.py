@@ -8,6 +8,8 @@ from django.http import HttpResponse
 from CoreFunction.CoreSearch import searchComment
 # Create your views here.
 
+logger = logging.getLogger('sourceDns.webdns.views')
+
 def test(request):
     return HttpResponse("ceshiceshi")
 
@@ -17,6 +19,8 @@ def searchCommentFunction(request):
     sorekey = ''
     pageindex = 0
     pagesize = 0
+
+    logger.info("hello, world")
 
     if request.method == 'POST':
        searchkey = request.POST.get('searchkey')
