@@ -12,20 +12,18 @@ def test(request):
     return HttpResponse("ceshiceshi")
 
 def searchCommentFunction(request):
-    postObj = request.POST.copy()
-    getObj = request.GET.copy()
 
     searchkey = ''
     sorekey = ''
     pageindex = 0
     pagesize = 0
 
-    if type(postObj) != type(None):
+    if request.method == 'POST':
        searchkey = request.POST.get('searchkey')
        sorekey = request.POST.get('sorekey')
        pageindex = request.POST.get('pageindex')
        pagesize = request.POST.get('pagesize')
-    elif type(getObj) != type(None):
+    elif request.method == 'GET':
        searchkey = request.GET.get('searchkey')
        sorekey = request.GET.get('sorekey')
        pageindex = request.GET.get('pageindex')
