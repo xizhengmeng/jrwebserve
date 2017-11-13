@@ -44,6 +44,10 @@ def searchComment(searchkey, sorekey, pageindex, pagesize):
         dic['scondtime'] = item.get('time')
 
         list.append(dic)
-    liststring = json.dumps(list)
+
+    resultDic = {}
+    resultDic['resultData'] = list
+    resultDic['code'] = '0000'
+    liststring = json.dumps(resultDic)
     return liststring
 
