@@ -26,7 +26,7 @@ dbs = comment.find({})
 for item in dbs:
     userReviewId = item['userReviewId']
     if userReviewId in idList:
-        contine
+        continue
     body = item.get('body')
     if len(body) > 10 and len(body) < 150 and 1.0*body.count('好')/len(body)*3 < 0.4:
         print 'clencomment insert new'
