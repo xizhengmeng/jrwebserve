@@ -48,6 +48,9 @@ mydb = connection.Spider # new a database
 comment = mydb.Comment # new a table
 clencomment = mydb.CleanComment
 
+#clencomment.remove({})
+#sys.exit(1)
+
 cdbs = clencomment.find({})
 
 idList = []
