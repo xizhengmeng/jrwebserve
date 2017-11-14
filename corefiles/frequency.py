@@ -16,9 +16,9 @@ cleanall = clencomment.find({})
 
 keyword = {}
 
-for item in cleanall:
-	body = item['body']
-    seg_list = seg_list = jieba.cut(body)  # 搜索引擎模式
+for item in cleanall:	
+    body = item['body']
+    seg_list = seg_list = jieba.cut(body)
     for word in seg_list:
     	count = keyword.get(word)
         if type(count) == type(None):
@@ -30,8 +30,8 @@ for item in cleanall:
 
 resultDict = sorted(keyword.items(), key=lambda d:d[1], reverse = True)
 
-for item in resultDict.keys():
-    print item,resultDict.get(item)     
+for item in resultDict:
+    print item[0],item[1]     
 
 
 
