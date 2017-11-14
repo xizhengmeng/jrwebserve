@@ -28,11 +28,10 @@ for item in dbs:
     if userReviewId in isList:
        continue
     body = item.get('body')
-    if len(body) > 10 and len(body) < 150:
+    if len(body) > 10 and len(body) < 150 and 1.0*body.count('好')/len(body)*3 < 0.4:
         print 'clencomment insert new'
         print body
         print item['date']
     	clencomment.insert(item)
 
 
-print 'ceshi\n'
