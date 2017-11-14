@@ -10,7 +10,10 @@ sys.setdefaultencoding( "utf-8" )
 
 def checkIfisuseful(string):
     if len(body) > 10 and len(body) < 150:
-        unitext = unicode(string, 'utf-8')
+        unitext = string
+        if type(string) == type(''):
+            unitext = unicode(string, 'utf-8')
+
         stringlist = unitext
         dic = {}
         for item in stringlist:
