@@ -33,8 +33,10 @@ def checkIfisuseful(string):
             count = dic.get(key) * 1.0
             percent = count / total
             if percent > 0.3:
+                print '------------smart'
                 print key, percent
                 print string
+                print '------------smart'
                 return False
         return True
 
