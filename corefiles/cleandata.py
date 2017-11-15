@@ -34,7 +34,7 @@ def checkIfisuseful(string,date):
             percent = count / total
             if percent > 0.3:
                 print '-------------------'
-                print date,key, percent
+                print date,key,percent
                 print string
                 print '*******************'
                 return False
@@ -68,9 +68,7 @@ for item in dbs:
     body = item.get('body')
     date = item.get('date')
     if checkIfisuseful(body,date) == True:
-       print 'clencomment insert new'
-       print body
-       print item['date']
+       print 'clencomment insert new ' + item['date'] + body
        clencomment.insert(item)
 
 
