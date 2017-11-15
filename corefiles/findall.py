@@ -19,6 +19,8 @@ dbs = clencomment.find({})
 #dbs = comment.find({'body':re.compile('不好')})
 count = 0
 for item in dbs:
+    print item['body']
+    print item['date']
     count = count + 1
 
 print count
