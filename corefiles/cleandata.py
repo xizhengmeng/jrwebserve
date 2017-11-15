@@ -8,7 +8,7 @@ import re
 reload(sys)
 sys.setdefaultencoding( "utf-8" )
 
-def checkIfisuseful(string):
+def checkIfisuseful(string,date):
     if len(body) > 10 and len(body) < 150:
         unitext = string
         if type(string) == type(''):
@@ -33,10 +33,10 @@ def checkIfisuseful(string):
             count = dic.get(key) * 1.0
             percent = count / total
             if percent > 0.3:
-                print '------------smart'
-                print key, percent
+                print '-------------------'
+                print date,key, percent
                 print string
-                print '------------smart'
+                print '*******************'
                 return False
         return True
 
@@ -66,7 +66,8 @@ for item in dbs:
     if userReviewId in idList:
         continue
     body = item.get('body')
-    if checkIfisuseful(body) == True:
+    date = item.get('date')
+    if checkIfisuseful(body,date) == True:
        print 'clencomment insert new'
        print body
        print item['date']
