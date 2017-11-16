@@ -16,7 +16,7 @@ for item in dbs:
     if len(item['body']) > 30 or int(item['rating']) > 3:
         continue
     seg_list = jieba.cut(item['forsearch'])
-    print '**************' + item['rating']
+    print '**************' + '%d' % item['rating']
     print item['forsearch']
     for word in seg_list:
         print word
