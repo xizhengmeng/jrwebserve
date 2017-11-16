@@ -20,6 +20,7 @@ from jrweb import views as jrviews  # new
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'test', jrviews.test),
-    url(r'^jdjrsearchcomment/', jrviews.searchCommentFunction)
+    url(r'^jdjrsearchcomment/', jrviews.searchCommentFunction),
+    url(r'^getkeywords/', jrviews.getKeyWordFunction)
     # url(r'^$', jrviews.home,name='home'),  # new
 ]

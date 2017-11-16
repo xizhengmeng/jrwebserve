@@ -5,7 +5,7 @@ from __future__ import unicode_literals
 from django.http import HttpResponse
 
 # from corefunction.coresearch import searchComment
-from CoreFunction.CoreSearch import searchComment
+from CoreFunction.CoreSearch import searchComment,createKeyWordList
 # Create your views here.
 import logging
 #
@@ -44,3 +44,8 @@ def searchCommentFunction(request):
 
     searchResultString = searchComment(searchkey,sorekey,pageindex,pagesize)
     return HttpResponse(searchResultString)
+
+def getKeyWordFunction(request):
+
+    returnString = createKeyWordList()
+    return HttpResponse(returnString)

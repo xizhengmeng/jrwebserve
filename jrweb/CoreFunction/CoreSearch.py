@@ -14,7 +14,7 @@ connection = MongoClient("localhost", 27017)
 mydb = connection.Spider  # new a database
 #comment = mydb.Comment  # new a table
 clencomment = mydb.CleanComment
-
+statistics = mydb.Statistics  # new a table
 
 def searchComment(searchkey, sorekey, pageindex, pagesize):
     if type(searchkey) == type(None):
@@ -65,3 +65,11 @@ def searchComment(searchkey, sorekey, pageindex, pagesize):
 
     return liststring
 
+def createKeyWordList():
+    dbs = statistics.find({})
+    dic = {}
+    for db in dbs:
+    	dic = db['statistic']
+
+    resultString = json.dumps(dic)
+    return resultString
