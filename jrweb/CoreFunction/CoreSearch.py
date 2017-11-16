@@ -67,9 +67,14 @@ def searchComment(searchkey, sorekey, pageindex, pagesize):
 
 def createKeyWordList():
     dbs = statistics.find({})
-    dic = {}
+    list = []
     for db in dbs:
-    	dic = db['statistic']
+        list = db['statistic']
 
-    resultString = json.dumps(dic)
+    resultDic = {}
+    resultDic['resultData'] = list
+    resultDic['code'] = '0000'
+
+    resultString = json.dumps(resultDic)
+    
     return resultString

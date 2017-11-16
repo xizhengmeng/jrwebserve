@@ -31,12 +31,20 @@ dic['experience'] = experience
 dic['other'] = other
 
 keys = dic.keys()
+resultData = []
 
 for key in keys:
+    cureentDic = {'title':key}
+    speList = []
     dicSpe = dic.get(key)
     for item in dicSpe:
         keyword = item.keys()[0]
         dbs = comment.find({'body': re.compile(keyword)})
-        item[keyword] = dbs.count()
+        del item[keyword]
+        item['content'] = keyword
+        item['num'] = dbs.count()
+        speList.append(item)
+    cureentDic['list'] = speList
+    resultData.append(cureentDic)
 
-statistics.insert({'statistic': dic})
+statistics.insert({'statistic': resultData})
