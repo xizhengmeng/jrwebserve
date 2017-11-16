@@ -14,7 +14,7 @@ def open_excel(file):
     except Exception,e:
         print str(e)
 #根据索引获取Excel表格中的数据   参数:file：Excel文件路径     colnameindex：表头列名所在行的所以  ，by_index：表的索引
-def excel_table_byindex(file,colnameindex=0,by_index=0):
+def excel_table_byindex(file,colnameindex,by_index):
     data = open_excel(file)
     table = data.sheets()[by_index]
     nrows = table.nrows #行数
@@ -55,8 +55,12 @@ def main():
 
    baseList = []  
    basedata.remove({})
-   tables = excel_table_byindex('../coredata/analysebasedata.xlsx')
-   for row in tables:
+
+   tableList = []
+   for i in range(2):
+       tables = excel_table_byindex('../coredata/analysebasedata.xlsx',0,i)
+       tableList = tableList + tables
+   for row in tableList:
        rowDic = {}
        title = row[u'词语']
        nominal = row[u'极性']
@@ -68,7 +72,7 @@ def main():
    
        rowDic[u'title'] = title
        rowDic[u'nominal'] = nominal
-       print rowDic
+       print title,nominal
        basedata.insert(rowDic)
 
 if __name__=="__main__":

@@ -70,6 +70,6 @@ for item in dbs:
           print 'clencomment insert new ' + item['date'] + body
           forsearch = body + item['title']
           item['forsearch'] = forsearch
-          clencomment.insert(item)
+          clencomment.save(item)
 
 

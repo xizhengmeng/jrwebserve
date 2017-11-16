@@ -49,4 +49,4 @@ for key in keys:
     cureentDic['list'] = speList
     resultData.append(cureentDic)
 
-statistics.insert({'statistic': resultData})
+statistics.save({'statistic': resultData})

@@ -15,9 +15,8 @@ for item in dbs:
     nominal = 0
     if len(item['body']) > 30 or int(item['rating']) > 3:
         continue
-    print item['rating']
     seg_list = jieba.cut(item['forsearch'])
-    print '**************'
+    print '**************' + item['rating']
     print item['forsearch']
     for word in seg_list:
         print word
@@ -27,8 +26,9 @@ for item in dbs:
         itemnominal = baseitem.get('nominal')
         nominal = nominal + itemnominal
         print itemnominal, word
+    print item['body'],nominal
 
 #clencomment.remove({})
 
 #for item in analyseList:
-#    clencomment.insert(item)
+#    clencomment.save(item)

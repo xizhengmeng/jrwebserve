@@ -34,7 +34,7 @@ class TutorialPipeline(object):
               print time.strftime('%Y-%m-%d %H:%M:%S',time.localtime(time.time()))
               print item['body']
               postItem = dict(item)  # 把item转化成字典形式
-              self.coll.insert(postItem)  # 向数据库插入一条记录
+              self.coll.save(postItem)  # 向数据库插入一条记录
         elif spider.name == 'andorid':
             print 'andorid'
             userReviewId = item['userReviewId']
@@ -45,6 +45,6 @@ class TutorialPipeline(object):
                 print time.strftime('%Y-%m-%d %H:%M:%S', time.localtime(time.time()))
                 print item['body']
                 postItem = dict(item)  # 把item转化成字典形式
-                self.coll.insert(postItem)  # 向数据库插入一条记录
+                self.coll.save(postItem)  # 向数据库插入一条记录
 
         return item
