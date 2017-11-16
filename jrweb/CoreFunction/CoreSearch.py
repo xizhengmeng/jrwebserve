@@ -76,5 +76,5 @@ def createKeyWordList():
     resultDic['code'] = '0000'
 
     resultString = json.dumps(resultDic)
-    
+
     return resultString

@@ -26,9 +26,9 @@ experience = [{u'闪退': 0}, {u'体验': 0}, {u'界面': 0}, {u'操作': 0}, {u
 other = [{u'商城': 0}, {u'客服': 0}, {u'支付宝': 0}, {u'垃圾': 0}]
 
 dic = {}
-dic['service'] = service
-dic['experience'] = experience
-dic['other'] = other
+dic[u'业务'] = service
+dic[u'体验'] = experience
+dic[u'其他'] = other
 
 keys = dic.keys()
 resultData = []
