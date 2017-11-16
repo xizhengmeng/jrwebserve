@@ -13,6 +13,8 @@ mydb = connection.Spider  # new a database
 comment = mydb.CleanComment  # new a table
 statistics = mydb.Statistics  # new a table
 
+statistics.remove({})
+
 # dbs = statistics.find({})
 
 # for db in dbs:
