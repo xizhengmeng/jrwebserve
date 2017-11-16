@@ -12,8 +12,6 @@ mydb = connection.Spider # new a database
 comment = mydb.Comment # new a table
 clencomment = mydb.CleanComment
 
-command = sys.argv[1]
-
 dbs = clencomment.find({})
 
 #dbs = comment.find({'body':re.compile('白条')}).sort([('date',1)]).limit(10).skip(20)
