@@ -68,6 +68,8 @@ for item in dbs:
        date = item.get('date')
        if checkIfisuseful(body,date) == True:
           print 'clencomment insert new ' + item['date'] + body
+          forsearch = body + item['title']
+          item['forserch'] = forsearch
           clencomment.insert(item)
 
 

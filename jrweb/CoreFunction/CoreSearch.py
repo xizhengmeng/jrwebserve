@@ -43,7 +43,7 @@ def searchComment(searchkey, sorekey, pageindex, pagesize):
 
     skipnumber = pagesize * pageindex
 
-    dbs = clencomment.find({'body': re.compile(searchkey)}).sort([('date',-1)]).limit(pagesize).skip(skipnumber)
+    dbs = clencomment.find({'forsearch': re.compile(searchkey)}).sort([('date',-1)]).limit(pagesize).skip(skipnumber)
 
     list = []
     for item in dbs:
