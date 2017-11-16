@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e7f50ca6-493a-4bac-b47f-1ed4de801187" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/corefiles/createKeyword.py" afterPath="$PROJECT_DIR$/corefiles/createKeyword.py" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/corefiles/ontimeExce.py" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/corefiles/cleandata.py" afterPath="$PROJECT_DIR$/corefiles/cleandata.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/corefiles/findall.py" afterPath="$PROJECT_DIR$/corefiles/findall.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -49,11 +51,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="createKeyword.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="createKeyword.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/corefiles/createKeyword.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="250">
-              <caret line="27" column="0" lean-forward="false" selection-start-line="27" selection-start-column="0" selection-end-line="30" selection-end-column="18" />
+            <state relative-caret-position="280">
+              <caret line="29" column="0" lean-forward="false" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
               <folding>
                 <element signature="e#38#52#0" expanded="true" />
               </folding>
@@ -61,13 +63,35 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="items.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/spider/tutorial/items.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="165">
+              <caret line="11" column="16" lean-forward="false" selection-start-line="11" selection-start-column="4" selection-end-line="11" selection-end-column="16" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="findall.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/corefiles/findall.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="30">
-              <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="16" selection-end-column="84" />
+            <state relative-caret-position="345">
+              <caret line="23" column="40" lean-forward="false" selection-start-line="23" selection-start-column="40" selection-end-line="23" selection-end-column="40" />
               <folding>
                 <element signature="e#37#50#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="models.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/jrweb/models.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="15">
+              <caret line="1" column="0" lean-forward="true" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+              <folding>
+                <element signature="e#24#63#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -76,8 +100,20 @@
       <file leaf-file-name="cleandata.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/corefiles/cleandata.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="15">
-              <caret line="36" column="31" lean-forward="false" selection-start-line="36" selection-start-column="31" selection-end-line="36" selection-end-column="31" />
+            <state relative-caret-position="480">
+              <caret line="70" column="10" lean-forward="false" selection-start-line="70" selection-start-column="10" selection-end-line="70" selection-end-column="10" />
+              <folding>
+                <element signature="e#38#51#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="clearallcleandata.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/corefiles/clearallcleandata.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="45">
+              <caret line="3" column="0" lean-forward="true" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
               <folding>
                 <element signature="e#38#51#0" expanded="true" />
               </folding>
@@ -122,11 +158,14 @@
         <option value="$PROJECT_DIR$/jdjrweb/settings.py" />
         <option value="$PROJECT_DIR$/spider/tutorial/pipelines.py" />
         <option value="$PROJECT_DIR$/corefiles/frequency.py" />
-        <option value="$PROJECT_DIR$/corefiles/cleandata.py" />
         <option value="$PROJECT_DIR$/jrweb/views.py" />
         <option value="$PROJECT_DIR$/jdjrweb/urls.py" />
         <option value="$PROJECT_DIR$/jrweb/corefunction/CoreSearch.py" />
         <option value="$PROJECT_DIR$/corefiles/createKeyword.py" />
+        <option value="$PROJECT_DIR$/corefiles/cleandata.py" />
+        <option value="$PROJECT_DIR$/corefiles/ontimeExce.py" />
+        <option value="$PROJECT_DIR$/corefiles/clearallcleandata.py" />
+        <option value="$PROJECT_DIR$/corefiles/findall.py" />
       </list>
     </option>
   </component>
@@ -167,6 +206,11 @@
             <path>
               <item name="jrwebserve" type="b2602c69:ProjectViewProjectNode" />
               <item name="jrwebserve" type="462c0819:PsiDirectoryNode" />
+              <item name="jdjrweb" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="jrwebserve" type="b2602c69:ProjectViewProjectNode" />
+              <item name="jrwebserve" type="462c0819:PsiDirectoryNode" />
               <item name="jrweb" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -174,6 +218,17 @@
               <item name="jrwebserve" type="462c0819:PsiDirectoryNode" />
               <item name="jrweb" type="462c0819:PsiDirectoryNode" />
               <item name="corefunction" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="jrwebserve" type="b2602c69:ProjectViewProjectNode" />
+              <item name="jrwebserve" type="462c0819:PsiDirectoryNode" />
+              <item name="spider" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="jrwebserve" type="b2602c69:ProjectViewProjectNode" />
+              <item name="jrwebserve" type="462c0819:PsiDirectoryNode" />
+              <item name="spider" type="462c0819:PsiDirectoryNode" />
+              <item name="tutorial" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -243,32 +298,12 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/jrweb/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="31" column="31" lean-forward="false" selection-start-line="31" selection-start-column="31" selection-end-line="31" selection-end-column="31" />
-          <folding>
-            <element signature="e#25#64#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/jdjrweb/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="21" column="14" lean-forward="false" selection-start-line="21" selection-start-column="10" selection-end-line="21" selection-end-column="14" />
-          <folding>
-            <element signature="e#641#673#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/spider/tutorial/pipelines.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="465">
           <caret line="34" column="19" lean-forward="false" selection-start-line="34" selection-start-column="14" selection-end-line="34" selection-end-column="19" />
           <folding>
-            <element signature="e#192#206#0" expanded="true" />
+            <element signature="e#192#206#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -278,7 +313,7 @@
         <state relative-caret-position="1515">
           <caret line="103" column="13" lean-forward="false" selection-start-line="103" selection-start-column="8" selection-end-line="103" selection-end-column="13" />
           <folding>
-            <element signature="e#0#13#0" expanded="true" />
+            <element signature="e#0#13#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -344,7 +379,7 @@
         <state relative-caret-position="465">
           <caret line="34" column="19" lean-forward="false" selection-start-line="34" selection-start-column="14" selection-end-line="34" selection-end-column="19" />
           <folding>
-            <element signature="e#192#206#0" expanded="true" />
+            <element signature="e#192#206#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -354,7 +389,7 @@
         <state relative-caret-position="1515">
           <caret line="103" column="13" lean-forward="false" selection-start-line="103" selection-start-column="8" selection-end-line="103" selection-end-column="13" />
           <folding>
-            <element signature="e#0#13#0" expanded="true" />
+            <element signature="e#0#13#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -429,7 +464,7 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#192#206#0" expanded="true" />
+            <element signature="e#192#206#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -473,7 +508,7 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#192#206#0" expanded="true" />
+            <element signature="e#192#206#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -527,7 +562,7 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#192#206#0" expanded="true" />
+            <element signature="e#192#206#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -595,30 +630,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/corefiles/cleandata.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="36" column="31" lean-forward="false" selection-start-line="36" selection-start-column="31" selection-end-line="36" selection-end-column="31" />
-          <folding>
-            <element signature="e#38#51#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/spider/tutorial/items.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="1" lean-forward="false" selection-start-line="13" selection-start-column="4" selection-end-line="13" selection-end-column="8" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/spider/tutorial/spiders/dmoz_spider.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="538">
           <caret line="103" column="13" lean-forward="false" selection-start-line="103" selection-start-column="8" selection-end-line="103" selection-end-column="13" />
           <folding>
-            <element signature="e#0#13#0" expanded="true" />
+            <element signature="e#0#13#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -628,17 +645,7 @@
         <state relative-caret-position="465">
           <caret line="34" column="19" lean-forward="false" selection-start-line="34" selection-start-column="14" selection-end-line="34" selection-end-column="19" />
           <folding>
-            <element signature="e#192#206#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/corefiles/findall.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="16" selection-end-column="84" />
-          <folding>
-            <element signature="e#37#50#0" expanded="true" />
+            <element signature="e#192#206#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -681,12 +688,68 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/jrweb/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" column="0" lean-forward="true" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+          <folding>
+            <element signature="e#24#63#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spider/tutorial/items.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" column="16" lean-forward="false" selection-start-line="11" selection-start-column="4" selection-end-line="11" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/corefiles/createKeyword.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="250">
-          <caret line="27" column="0" lean-forward="false" selection-start-line="27" selection-start-column="0" selection-end-line="30" selection-end-column="18" />
+        <state relative-caret-position="280">
+          <caret line="29" column="0" lean-forward="false" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
           <folding>
             <element signature="e#38#52#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/corefiles/ontimeExce.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="24" lean-forward="false" selection-start-line="10" selection-start-column="24" selection-end-line="10" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/corefiles/cleandata.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="480">
+          <caret line="70" column="10" lean-forward="false" selection-start-line="70" selection-start-column="10" selection-end-line="70" selection-end-column="10" />
+          <folding>
+            <element signature="e#38#51#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/corefiles/findall.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="23" column="40" lean-forward="false" selection-start-line="23" selection-start-column="40" selection-end-line="23" selection-end-column="40" />
+          <folding>
+            <element signature="e#37#50#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/corefiles/clearallcleandata.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" column="0" lean-forward="true" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+          <folding>
+            <element signature="e#38#51#0" expanded="true" />
           </folding>
         </state>
       </provider>

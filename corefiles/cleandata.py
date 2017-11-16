@@ -63,12 +63,11 @@ dbs = comment.find({})
 
 for item in dbs:
     userReviewId = item['userReviewId']
-    if userReviewId in idList:
-        continue
-    body = item.get('body')
-    date = item.get('date')
-    if checkIfisuseful(body,date) == True:
-       print 'clencomment insert new ' + item['date'] + body
-       clencomment.insert(item)
+    if userReviewId not in idList:
+       body = item.get('body')
+       date = item.get('date')
+       if checkIfisuseful(body,date) == True:
+          print 'clencomment insert new ' + item['date'] + body
+          clencomment.insert(item)
 
 
