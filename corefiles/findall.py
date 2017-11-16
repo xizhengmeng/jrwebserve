@@ -19,9 +19,15 @@ dbs = clencomment.find({})
 #dbs = comment.find({'body':re.compile('白条')}).sort([('date',1)]).limit(10).skip(20)
 #dbs = comment.find({'body':re.compile('白条')}).sort([('date',1)]).limit(20)
 #dbs = comment.find({'body':re.compile('不好')})
+
+idList = []
+
 count = 0
 for item in dbs:
-    print item['body'] + item['date'] + item['userReviewId']
-    count = count + 1
+    if item['userReviewId'] in idList:
+        print 'repeat' + item['body'] + item['date'] + item['userReviewId']
+    else:
+        print item['body'] + item['date'] + item['userReviewId']
+        count = count + 1
 
 print count
