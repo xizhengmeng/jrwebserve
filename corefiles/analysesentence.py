@@ -43,7 +43,8 @@ for i in range(15):
                nominal = nominal - 1
             else:
                print word,'0'
-        print item['forsearch'],nominal
+        if nominal != 0 and item['rating'] == 5:
+           print item['forsearch'],nominal
 
 #clencomment.remove({})
 
