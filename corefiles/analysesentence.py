@@ -3,6 +3,10 @@ import os ,sys
 from pymongo import MongoClient
 import jieba
 
+
+reload(sys)
+sys.setdefaultencoding( "utf-8" )
+
 connection = MongoClient("localhost", 27017)
 mydb = connection.Spider  # new a database
 basedata = mydb.analysebasedata  # new a table
@@ -26,16 +30,20 @@ for i in range(15):
 
     for item in dbs:
         nominal = 0
-        if len(item['forsearch']) > 30 or int(item['rating']) > 3:
+        if len(item['forsearch']) > 100 or int(item['rating']) > 3:
             continue
         seg_list = jieba.cut(item['forsearch'])
         print '**************' + '%d' % item['rating']
         # print item['forsearch']
         for word in seg_list:
             if word in poslist:
+               print word,'1'
                nominal = nominal + 1
             elif word in neglist:
+               print word, '-1'
                nominal = nominal - 1
+            else:
+               print word,'0'
         print item['forsearch'],nominal
 
 #clencomment.remove({})
