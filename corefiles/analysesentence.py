@@ -10,7 +10,9 @@ sys.setdefaultencoding( "utf-8" )
 connection = MongoClient("localhost", 27017)
 mydb = connection.database  # new a database
 basedata = mydb.analysebasedata  # new a table
-clencomment = mydb.CleanComment
+
+mydbs = connection.Spider  # new a database
+clencomment = mydbs.CleanComment
 
 basedata = mydb.analysebasedata  # new a table
 
