@@ -41,8 +41,6 @@ for i in range(15):
             elif word in neglist:
                print word, '-1'
                nominal = nominal - 1
-            else:
-               print word,'0'
         if nominal != 0 and item['rating'] == 5:
            print item['forsearch'],nominal
 
