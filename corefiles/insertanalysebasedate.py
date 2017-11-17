@@ -53,27 +53,36 @@ def main():
    #     print item
    # sys.exit(1)    
 
-   baseList = []  
-   basedata.remove({})
+   negtables = excel_table_byindex('../coredata/analysebasedata.xlsx', 0, 0)
 
-   tableList = []
-   for i in range(2):
-       tables = excel_table_byindex('../coredata/analysebasedata.xlsx',0,i)
-       tableList = tableList + tables
-   for row in tableList:
-       rowDic = {}
+   postables = excel_table_byindex('../coredata/analysebasedata.xlsx', 0, 1)
+
+   neutables = excel_table_byindex('../coredata/analysebasedata.xlsx', 0, 2)
+
+   wordDic = {}
+
+   for row in negtables:
+       neglist = []
        title = row[u'词语']
-       nominal = row[u'极性']
-       nominal = int(nominal)
-       if nominal == 2:
-          nominal = -1
-       elif nominal == 3:
-          nominal = 0
-   
-       rowDic[u'title'] = title
-       rowDic[u'nominal'] = nominal
-       print title,nominal
-       basedata.insert(rowDic)
+       neglist.append(title)
+
+   for row in postables:
+       poslist = []
+       title = row[u'词语']
+       poslist.append(title)
+
+   for row in neutables:
+       neulist = []
+       title = row[u'词语']
+       neulist.append(title)
+
+   wordDic['pos'] = poslist
+   wordDic['neg'] = neglist
+   wordDic['neu'] = neulist
+   wordDic['name'] = 'word'
+
+   basedata.remove({})
+   basedata.insert(wordDic)
 
 if __name__=="__main__":
     main()

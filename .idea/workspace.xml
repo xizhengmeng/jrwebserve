@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e7f50ca6-493a-4bac-b47f-1ed4de801187" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/corefiles/analysesentence.py" afterPath="$PROJECT_DIR$/corefiles/analysesentence.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/coredata/analysebasedata.xlsx" afterPath="$PROJECT_DIR$/coredata/analysebasedata.xlsx" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/corefiles/insertanalysebasedate.py" afterPath="$PROJECT_DIR$/corefiles/insertanalysebasedate.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -93,11 +94,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="analysesentence.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="analysesentence.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/corefiles/analysesentence.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="226">
-              <caret line="18" column="36" lean-forward="false" selection-start-line="18" selection-start-column="36" selection-end-line="18" selection-end-column="36" />
+            <state relative-caret-position="330">
+              <caret line="22" column="46" lean-forward="true" selection-start-line="22" selection-start-column="46" selection-end-line="22" selection-end-column="46" />
               <folding>
                 <element signature="e#24#38#0" expanded="true" />
               </folding>
@@ -105,11 +106,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="insertanalysebasedate.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="insertanalysebasedate.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/corefiles/insertanalysebasedate.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="484">
-              <caret line="74" column="26" lean-forward="false" selection-start-line="74" selection-start-column="26" selection-end-line="74" selection-end-column="26" />
+            <state relative-caret-position="74">
+              <caret line="62" column="0" lean-forward="true" selection-start-line="62" selection-start-column="0" selection-end-line="62" selection-end-column="0" />
               <folding>
                 <element signature="e#25#43#0" expanded="true" />
               </folding>
@@ -144,6 +145,7 @@
       <find>print</find>
       <find>createKeyWordList</find>
       <find>insert</find>
+      <find>baseList</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -163,13 +165,12 @@
         <option value="$PROJECT_DIR$/corefiles/cleandata.py" />
         <option value="$PROJECT_DIR$/corefiles/createKeyword.py" />
         <option value="$PROJECT_DIR$/spider/tutorial/pipelines.py" />
-        <option value="$PROJECT_DIR$/corefiles/insertanalysebasedate.py" />
         <option value="$PROJECT_DIR$/corefiles/analysesentence.py" />
+        <option value="$PROJECT_DIR$/corefiles/insertanalysebasedate.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="81" />
     <option name="y" value="23" />
     <option name="width" value="1276" />
     <option name="height" value="863" />
@@ -273,7 +274,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="81" y="23" width="1276" height="863" extended-state="0" />
+    <frame x="0" y="23" width="1276" height="863" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.273906" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -736,22 +737,22 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/corefiles/insertanalysebasedate.py">
+    <entry file="file://$PROJECT_DIR$/corefiles/analysesentence.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="484">
-          <caret line="74" column="26" lean-forward="false" selection-start-line="74" selection-start-column="26" selection-end-line="74" selection-end-column="26" />
+        <state relative-caret-position="330">
+          <caret line="22" column="46" lean-forward="true" selection-start-line="22" selection-start-column="46" selection-end-line="22" selection-end-column="46" />
           <folding>
-            <element signature="e#25#43#0" expanded="true" />
+            <element signature="e#24#38#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/corefiles/analysesentence.py">
+    <entry file="file://$PROJECT_DIR$/corefiles/insertanalysebasedate.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="226">
-          <caret line="18" column="36" lean-forward="false" selection-start-line="18" selection-start-column="36" selection-end-line="18" selection-end-column="36" />
+        <state relative-caret-position="74">
+          <caret line="62" column="0" lean-forward="true" selection-start-line="62" selection-start-column="0" selection-end-line="62" selection-end-column="0" />
           <folding>
-            <element signature="e#24#38#0" expanded="true" />
+            <element signature="e#25#43#0" expanded="true" />
           </folding>
         </state>
       </provider>
