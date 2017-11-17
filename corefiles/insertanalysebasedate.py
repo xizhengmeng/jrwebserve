@@ -63,16 +63,19 @@ def main():
 
    for row in negtables:
        neglist = []
+       print  row
        title = row[u'词语']
        neglist.append(title)
 
    for row in postables:
        poslist = []
+       print row
        title = row[u'词语']
        poslist.append(title)
 
    for row in neutables:
        neulist = []
+       print row
        title = row[u'词语']
        neulist.append(title)
 
