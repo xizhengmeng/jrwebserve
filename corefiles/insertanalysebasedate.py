@@ -55,18 +55,14 @@ basedata = mydb.analysebasedata  # new a table
 wordDic = {}
 
 for i in range(3):
-
    if i == 0:
-      tables = open('../coredata/neg.txt').read().split('\n')
-      print type(tables)
+      tables = open('../coredata/neg.txt').read().split('\r')
       wordDic['neg'] = tables
    elif i == 1:
-      tables = open('../coredata/pos.txt').read().split('\n')
-      print type(tables)
+      tables = open('../coredata/pos.txt').read().split('\r')
       wordDic['pos'] = tables
    elif i == 2:
-      tables = open('../coredata/neu.txt').read().split('\n')
-      print type(tables)
+      tables = open('../coredata/neu.txt').read().split('\r')
       wordDic['neu'] = tables
 
 basedata.remove({})
