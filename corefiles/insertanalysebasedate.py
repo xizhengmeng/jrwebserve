@@ -65,17 +65,15 @@ def main():
    neulist = []
 
    for row in negtables:
-       print  row
        neglist.append(row)
 
    for row in postables:
-       print row
        poslist.append(row)
 
    for row in neutables:
-       print row
        neulist.append(row)
 
+   print len(neutables)
    wordDic['pos'] = poslist
    wordDic['neg'] = neglist
    wordDic['neu'] = neulist
