@@ -26,14 +26,15 @@ for item in dbs:
     poslist = item['pos']
     neglist = item['neg']
 
-cleanall = clencomment.find({})
+for i in range(14):
+    cleanall = clencomment.find({}).limit(1000).skip(1)
 
-for item in cleanall:
-    body = item['body']
-    seg_list = jieba.cut(body)
-    for word in seg_list:
-        if word not in neulist and word not in poslist and word not in neglist:
-            print word
+    for item in cleanall:
+        body = item['body']
+        seg_list = jieba.cut(body)
+        for word in seg_list:
+            if word not in neulist and word not in poslist and word not in neglist:
+                print word
 
 
 
