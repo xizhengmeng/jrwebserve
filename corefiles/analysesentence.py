@@ -30,15 +30,14 @@ for i in range(15):
 
     for item in dbs:
         nominal = 0
-        if len(item['forsearch']) > 100 or int(item['rating']) > 3:
-            continue
+        #if len(item['forsearch']) > 100 or int(item['rating']) > 3:
+        #   continue
         seg_list = jieba.cut(item['forsearch'])
         print '**************' + '%d' % item['rating']
         # print item['forsearch']
         for word in seg_list:
             if word in poslist:
                print word,'1'
-               nominal = nominal + 1
             elif word in neglist:
                print word, '-1'
                nominal = nominal - 1
