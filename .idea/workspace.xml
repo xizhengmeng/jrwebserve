@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e7f50ca6-493a-4bac-b47f-1ed4de801187" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/corefiles/analysesentence.py" afterPath="$PROJECT_DIR$/corefiles/analysesentence.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/corefiles/insertanalysebasedate.py" afterPath="$PROJECT_DIR$/corefiles/insertanalysebasedate.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -81,11 +82,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="analysesentence.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="analysesentence.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/corefiles/analysesentence.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="372">
-              <caret line="40" column="19" lean-forward="false" selection-start-line="40" selection-start-column="19" selection-end-line="40" selection-end-column="19" />
+            <state relative-caret-position="37">
+              <caret line="10" column="26" lean-forward="false" selection-start-line="10" selection-start-column="26" selection-end-line="10" selection-end-column="26" />
               <folding>
                 <element signature="e#24#38#0" expanded="true" />
               </folding>
@@ -93,11 +94,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="insertanalysebasedate.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="insertanalysebasedate.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/corefiles/insertanalysebasedate.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="403">
-              <caret line="68" column="0" lean-forward="true" selection-start-line="68" selection-start-column="0" selection-end-line="68" selection-end-column="0" />
+            <state relative-caret-position="88">
+              <caret line="6" column="26" lean-forward="false" selection-start-line="6" selection-start-column="18" selection-end-line="6" selection-end-column="26" />
               <folding>
                 <element signature="e#25#43#0" expanded="true" />
               </folding>
@@ -144,8 +145,8 @@
       <find>print</find>
       <find>createKeyWordList</find>
       <find>baseList</find>
-      <find>excel_table_byindex</find>
       <find>insert</find>
+      <find>excel_table_byindex</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -166,8 +167,8 @@
         <option value="$PROJECT_DIR$/corefiles/createKeyword.py" />
         <option value="$PROJECT_DIR$/spider/tutorial/pipelines.py" />
         <option value="$PROJECT_DIR$/corefiles/findunadd.py" />
-        <option value="$PROJECT_DIR$/corefiles/analysesentence.py" />
         <option value="$PROJECT_DIR$/corefiles/insertanalysebasedate.py" />
+        <option value="$PROJECT_DIR$/corefiles/analysesentence.py" />
       </list>
     </option>
   </component>
@@ -734,22 +735,22 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/corefiles/analysesentence.py">
+    <entry file="file://$PROJECT_DIR$/corefiles/insertanalysebasedate.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="372">
-          <caret line="40" column="19" lean-forward="false" selection-start-line="40" selection-start-column="19" selection-end-line="40" selection-end-column="19" />
+        <state relative-caret-position="88">
+          <caret line="6" column="26" lean-forward="false" selection-start-line="6" selection-start-column="18" selection-end-line="6" selection-end-column="26" />
           <folding>
-            <element signature="e#24#38#0" expanded="true" />
+            <element signature="e#25#43#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/corefiles/insertanalysebasedate.py">
+    <entry file="file://$PROJECT_DIR$/corefiles/analysesentence.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="403">
-          <caret line="68" column="0" lean-forward="true" selection-start-line="68" selection-start-column="0" selection-end-line="68" selection-end-column="0" />
+        <state relative-caret-position="37">
+          <caret line="10" column="26" lean-forward="false" selection-start-line="10" selection-start-column="26" selection-end-line="10" selection-end-column="26" />
           <folding>
-            <element signature="e#25#43#0" expanded="true" />
+            <element signature="e#24#38#0" expanded="true" />
           </folding>
         </state>
       </provider>

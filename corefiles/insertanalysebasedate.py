@@ -4,7 +4,7 @@ import xlrd
 from pymongo import MongoClient
 
 connection = MongoClient("localhost", 27017)
-mydb = connection.Spider  # new a database
+mydb = connection.database  # new a database
 basedata = mydb.analysebasedata  # new a table
 
 def open_excel(file):
