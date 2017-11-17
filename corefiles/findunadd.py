@@ -11,6 +11,7 @@ sys.setdefaultencoding( "utf-8" )
 connection = pymongo.MongoClient("localhost",27017)
 mydb = connection.Spider # new a database
 clencomment = mydb.CleanComment
+#clencomment = mydb.Comment
 basedata = mydb.analysebasedata  # new a table
 
 dbs = basedata.find({})
@@ -30,7 +31,8 @@ cleanall = clencomment.find({})
 keyword = {}
 
 for item in cleanall:
-    body = item['forsearch']
+    body = item['body']
+    print body
     seg_list = seg_list = jieba.cut(body)
     for word in seg_list:
     	count = keyword.get(word)
