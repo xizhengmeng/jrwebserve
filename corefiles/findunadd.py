@@ -33,7 +33,7 @@ keyword = {}
 for item in cleanall:
     body = item['body']
     print body
-    seg_list = seg_list = jieba.cut(body)
+    seg_list = jieba.cut(body)
     for word in seg_list:
     	count = keyword.get(word)
         if type(count) == type(None):
