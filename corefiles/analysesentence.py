@@ -33,9 +33,9 @@ for i in range(15):
         # print item['forsearch']
         for word in seg_list:
             if word in poslist:
-               nominal = nominal - 1
-            elif word in neglist:
                nominal = nominal + 1
+            elif word in neglist:
+               nominal = nominal - 1
         print item['forsearch'],nominal
 
 #clencomment.remove({})
