@@ -53,31 +53,19 @@ def main():
    #     print item
    # sys.exit(1)
 
-   negtables = excel_table_byindex('../coredata/analysebasedata.xlsx', 0, 0)
-
-   postables = excel_table_byindex('../coredata/analysebasedata.xlsx', 0, 1)
-
-   neutables = excel_table_byindex('../coredata/analysebasedata.xlsx', 0, 2)
-
    wordDic = {}
-   neglist = []
-   poslist = []
-   neulist = []
 
-   for row in negtables:
-       neglist.append(row)
-
-   for row in postables:
-       poslist.append(row)
-
-   for row in neutables:
-       neulist.append(row)
-
-   print len(neutables)
-   wordDic['pos'] = poslist
-   wordDic['neg'] = neglist
-   wordDic['neu'] = neulist
-   wordDic['name'] = 'word'
+   for i in range(3):
+       negtables = excel_table_byindex('../coredata/analysebasedata.xlsx', 0, i)
+       neglist = []
+       for row in negtables:
+           neglist.append(row)
+       if i == 0:
+          wordDic['neg'] = neglist
+       elif i == 1:
+          wordDic['pos'] = neglist
+       elif i == 2:
+          wordDic['neu'] = neglist
 
    basedata.remove({})
    basedata.insert(wordDic)
