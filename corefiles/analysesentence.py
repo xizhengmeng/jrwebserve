@@ -20,22 +20,23 @@ for item in basedbs:
     poslist = item['pos']
     neglist = item['neg']
 
-dbs = clencomment.find({})
-analyseList = []
+for i in range(15):
+    dbs = clencomment.find({}).limit(1000).skip(1)
+    analyseList = []
 
-for item in dbs:
-    nominal = 0
-    if len(item['forsearch']) > 30 or int(item['rating']) > 3:
-        continue
-    seg_list = jieba.cut(item['forsearch'])
-    print '**************' + '%d' % item['rating']
-    # print item['forsearch']
-    for word in seg_list:
-        if word in poslist:
-           nominal = nominal - 1
-        elif word in neglist:
-           nominal = nominal + 1
-    print item['forsearch'],nominal
+    for item in dbs:
+        nominal = 0
+        if len(item['forsearch']) > 30 or int(item['rating']) > 3:
+            continue
+        seg_list = jieba.cut(item['forsearch'])
+        print '**************' + '%d' % item['rating']
+        # print item['forsearch']
+        for word in seg_list:
+            if word in poslist:
+               nominal = nominal - 1
+            elif word in neglist:
+               nominal = nominal + 1
+        print item['forsearch'],nominal
 
 #clencomment.remove({})
 
