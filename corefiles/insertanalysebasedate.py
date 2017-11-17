@@ -18,16 +18,16 @@ def excel_table_byindex(file,colnameindex,by_index):
     data = open_excel(file)
     table = data.sheets()[by_index]
     nrows = table.nrows #行数
-    ncols = table.ncols #列数
-    colnames =  table.row_values(colnameindex) #某一行数据 
+    # ncols = table.ncols #列数
+    # colnames =  table.row_values(colnameindex) #某一行数据
     list =[]
     for rownum in range(1,nrows):
          row = table.row_values(rownum)
          if row:
-             app = {}
-             for i in range(len(colnames)):
-                app[colnames[i]] = row[i] 
-             list.append(app)
+             # app = {}
+             # for i in range(len(colnames)):
+             #    app[colnames[i]] = row[i]
+             list.append(row[0])
     return list
 
 #根据名称获取Excel表格中的数据   参数:file：Excel文件路径     colnameindex：表头列名所在行的所以  ，by_name：Sheet1名称
@@ -48,10 +48,10 @@ def excel_table_byname(file= 'file.xls',colnameindex=0,by_name=u'Sheet1'):
 
 def main():
 
-   # dbs = basedata.find({})  
+   # dbs = basedata.find({})
    # for item in dbs:
    #     print item
-   # sys.exit(1)    
+   # sys.exit(1)
 
    negtables = excel_table_byindex('../coredata/analysebasedata.xlsx', 0, 0)
 
@@ -60,24 +60,21 @@ def main():
    neutables = excel_table_byindex('../coredata/analysebasedata.xlsx', 0, 2)
 
    wordDic = {}
+   neglist = []
+   poslist = []
+   neulist = []
 
    for row in negtables:
-       neglist = []
        print  row
-       title = row[u'词语']
-       neglist.append(title)
+       neglist.append(row)
 
    for row in postables:
-       poslist = []
        print row
-       title = row[u'词语']
-       poslist.append(title)
+       poslist.append(row)
 
    for row in neutables:
-       neulist = []
        print row
-       title = row[u'词语']
-       neulist.append(title)
+       neulist.append(row)
 
    wordDic['pos'] = poslist
    wordDic['neg'] = neglist

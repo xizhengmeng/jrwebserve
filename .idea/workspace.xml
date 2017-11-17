@@ -108,8 +108,8 @@
       <file leaf-file-name="insertanalysebasedate.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/corefiles/insertanalysebasedate.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="374">
-              <caret line="77" column="16" lean-forward="false" selection-start-line="77" selection-start-column="16" selection-end-line="77" selection-end-column="16" />
+            <state relative-caret-position="400">
+              <caret line="53" column="8" lean-forward="false" selection-start-line="50" selection-start-column="2" selection-end-line="53" selection-end-column="8" />
               <folding>
                 <element signature="e#25#43#0" expanded="true" />
               </folding>
@@ -145,6 +145,7 @@
       <find>createKeyWordList</find>
       <find>insert</find>
       <find>baseList</find>
+      <find>excel_table_byindex</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -748,8 +749,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/corefiles/insertanalysebasedate.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="77" column="16" lean-forward="false" selection-start-line="77" selection-start-column="16" selection-end-line="77" selection-end-column="16" />
+        <state relative-caret-position="400">
+          <caret line="53" column="8" lean-forward="false" selection-start-line="50" selection-start-column="2" selection-end-line="53" selection-end-column="8" />
           <folding>
             <element signature="e#25#43#0" expanded="true" />
           </folding>
