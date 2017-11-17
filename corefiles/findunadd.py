@@ -30,7 +30,6 @@ cleanall = clencomment.find({})
 
 for item in cleanall:
     body = item['body']
-    print body
     seg_list = jieba.cut(body)
     for word in seg_list:
         if word not in neulist and word not in poslist and word not in neglist:
