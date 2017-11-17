@@ -28,29 +28,14 @@ for item in dbs:
 
 cleanall = clencomment.find({})
 
-keyword = {}
-
 for item in cleanall:
     body = item['body']
     print body
     seg_list = jieba.cut(body)
     for word in seg_list:
-    	count = keyword.get(word)
-        if type(count) == type(None):
-            count = 1
-            keyword[word] = count
-        else:
-            count = count + 1
-            keyword[word] = count
+        if word not in neulist and word not in poslist and word not in neglist:
+            print word
 
-resultDict = sorted(keyword.items(), key=lambda d:d[1], reverse = True)
-
-for item in resultDict:
-    word = item[0]
-    if word not in neulist and word not in poslist and word not in neglist:
-       print word,item[1]
-
-    # print item[0],item[1]
 
 
 
