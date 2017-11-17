@@ -37,7 +37,8 @@ for i in range(15):
         # print item['forsearch']
         for word in seg_list:
             if word in poslist:
-               print word,'1'
+               #print word,'1'
+               pass
             elif word in neglist:
                print word, '-1'
                nominal = nominal - 1
