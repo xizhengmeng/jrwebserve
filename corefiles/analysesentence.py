@@ -23,6 +23,7 @@ poslist = []
 neulist = []
 
 abpost = ['感谢','谢谢','好评','强哥','给你好评']
+jieba.load_userdict('../coredata/customdict.txt')
 
 for item in basedbs:
     poslist = item['pos']
