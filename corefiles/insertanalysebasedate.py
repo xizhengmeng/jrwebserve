@@ -64,6 +64,6 @@ for i in range(3):
    elif i == 2:
       tables = open('../coredata/neu.txt').read().split('\r')
       wordDic['neu'] = tables
-
+#
 basedata.remove({})
 basedata.insert(wordDic)
