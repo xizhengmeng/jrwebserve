@@ -6,21 +6,12 @@ import jieba
 reload(sys)
 sys.setdefaultencoding( "utf-8" )
 
-connection = MongoClient("localhost", 27017)
-mydb = connection.database  # new a database
-basedata = mydb.analysebasedata  # new a table
+items = open('../coredata/fordelete.txt').read().split('\n')
 
-mydbs = connection.Spider  # new a database
-clencomment = mydbs.CleanComment
+print len(items)
 
-basedata = mydb.analysebasedata  # new a table
+itemnews = open('../coredata/neg.txt').read().split('\r')
 
-basedbs = basedata.find({})
-
-neglist = []
-poslist = []
-neulist = []
-
-for item in basedbs:
-    poslist = item['pos']
-    neglist = item['neg']
+for item in itemnews:
+    if item not in items:
+       print item
