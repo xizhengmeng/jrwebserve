@@ -2,9 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e7f50ca6-493a-4bac-b47f-1ed4de801187" name="Default" comment="">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/coredata/~$analysebasedata.xlsx" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/coredata/analyse.py" afterPath="$PROJECT_DIR$/coredata/analyse.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/corefiles/insertanalysebasedate.py" afterPath="$PROJECT_DIR$/corefiles/insertanalysebasedate.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/coredata/neg.txt" afterPath="$PROJECT_DIR$/coredata/neg.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/coredata/pos.txt" afterPath="$PROJECT_DIR$/coredata/pos.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/corefiles/analysesentence.py" afterPath="$PROJECT_DIR$/corefiles/analysesentence.py" />
     </list>
     <ignored path=".idea/dataSources.local.xml" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -46,11 +48,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="analysesentence.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="analysesentence.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/corefiles/analysesentence.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="0" column="1" selection-start-line="0" selection-start-column="1" selection-end-line="27" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.45">
+              <caret line="42" column="23" selection-start-line="42" selection-start-column="23" selection-end-line="42" selection-end-column="23" />
               <folding>
                 <element signature="e#24#38#0" expanded="true" />
               </folding>
@@ -70,41 +72,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="insertanalysebasedate.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="insertanalysebasedate.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/corefiles/insertanalysebasedate.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="2.1564481">
-              <caret line="68" column="24" selection-start-line="68" selection-start-column="24" selection-end-line="68" selection-end-column="24" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="neg.txt" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/coredata/neg.txt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="neu.txt" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/coredata/neu.txt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="pos.txt" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/coredata/pos.txt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-6.148148">
-              <caret line="12453" column="1" selection-start-line="12453" selection-start-column="0" selection-end-line="12453" selection-end-column="1" />
+            <state vertical-scroll-proportion="-16.11111">
+              <caret line="58" column="61" selection-start-line="58" selection-start-column="61" selection-end-line="58" selection-end-column="61" />
               <folding />
             </state>
           </provider>
@@ -171,9 +143,9 @@
         <option value="$PROJECT_DIR$/corefiles/createKeyword.py" />
         <option value="$PROJECT_DIR$/spider/tutorial/pipelines.py" />
         <option value="$PROJECT_DIR$/corefiles/findunadd.py" />
-        <option value="$PROJECT_DIR$/corefiles/analysesentence.py" />
         <option value="$PROJECT_DIR$/coredata/analyse.py" />
         <option value="$PROJECT_DIR$/corefiles/insertanalysebasedate.py" />
+        <option value="$PROJECT_DIR$/corefiles/analysesentence.py" />
       </list>
     </option>
   </component>
@@ -663,16 +635,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/corefiles/analysesentence.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.0">
-          <caret line="0" column="1" selection-start-line="0" selection-start-column="1" selection-end-line="27" selection-end-column="0" />
-          <folding>
-            <element signature="e#24#38#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/coredata/analyse.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -686,7 +648,7 @@
     <entry file="file://$PROJECT_DIR$/coredata/neg.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -702,16 +664,26 @@
     <entry file="file://$PROJECT_DIR$/coredata/pos.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-6.148148">
-          <caret line="12453" column="1" selection-start-line="12453" selection-start-column="0" selection-end-line="12453" selection-end-column="1" />
+          <caret line="12484" column="1" selection-start-line="12453" selection-start-column="0" selection-end-line="12453" selection-end-column="1" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/corefiles/insertanalysebasedate.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="2.1564481">
-          <caret line="68" column="24" selection-start-line="68" selection-start-column="24" selection-end-line="68" selection-end-column="24" />
+        <state vertical-scroll-proportion="-16.11111">
+          <caret line="58" column="61" selection-start-line="58" selection-start-column="61" selection-end-line="58" selection-end-column="61" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/corefiles/analysesentence.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.45">
+          <caret line="42" column="23" selection-start-line="42" selection-start-column="23" selection-end-line="42" selection-end-column="23" />
+          <folding>
+            <element signature="e#24#38#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

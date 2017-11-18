@@ -22,6 +22,8 @@ neglist = []
 poslist = []
 neulist = []
 
+abpost = ['感谢','谢谢','好评','强哥','给你好评']
+
 for item in basedbs:
     poslist = item['pos']
     neglist = item['neg']
@@ -34,8 +36,14 @@ for i in range(15):
         nominal = 0
         #if len(item['forsearch']) > 100 or int(item['rating']) > 3:
         #   continue
-        seg_list = jieba.cut(item['forsearch'])
-        print '**************' + '%d' % item['rating']
+        forsearch = item['forsearch']
+
+        for setence in abpost:
+            if setence in forsearch:
+               continue
+
+        seg_list = jieba.cut(forsearch)
+        # print '**************' + '%d' % item['rating']
         # print item['forsearch']
         for word in seg_list:
             if word in poslist:
