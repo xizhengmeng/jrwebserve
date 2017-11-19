@@ -15,10 +15,10 @@ neglist = open('../coredata/neg.txt').read().split('\n')
 poslist = open('../coredata/pos.txt').read().split('\r')
 neulist = []
 
-abpost = ['感谢','谢谢','支持京东','强哥','给你好评','放心的京东','会一直支持的','会支持的','信赖京东','京东越来越好']
+abpost = ['非常满意','强烈好评','值得信赖的京东','京东支持','感谢','谢谢','支持京东','强哥','给你好评','放心的京东','会一直支持的','会支持的','信赖京东','京东越来越好']
 jieba.load_userdict('../coredata/customdict.txt')
 
-for i in range(2):
+for i in range(15):
     dbs = clencomment.find({}).limit(1000).skip(i*1000)
     analyseList = []
 
@@ -53,7 +53,7 @@ for i in range(2):
                if lastindex >= 0:
                    lastitem = seg_listnew[lastindex]
                    print 'last'+lastitem
-                   if lastitem == '不' or lastitem == '没有' or lastitem == '非' or lastitem == '不是':
+                   if lastitem == '无' or lastitem == '不' or lastitem == '没有' or lastitem == '非' or lastitem == '不是':
                        print 'fei' + lastitem + word
                    else:
                        print '2'+word
@@ -63,7 +63,7 @@ for i in range(2):
             else:
                #print '3'+word
                pass
-        if nominal != 0 and item['rating'] == 5:
+        if nominal != 0 and item['rating'] == 4:
            print 'neg'+item['forsearch']
 
 #clencomment.remove({})
