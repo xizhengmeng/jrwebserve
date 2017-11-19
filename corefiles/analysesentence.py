@@ -11,14 +11,14 @@ connection = MongoClient("localhost", 27017)
 mydbs = connection.Spider  # new a database
 clencomment = mydbs.CleanComment
 
-neglist = open('../coredata/neg.txt').read().split('\r')
+neglist = open('../coredata/neg.txt').read().split('\n')
 poslist = open('../coredata/pos.txt').read().split('\r')
 neulist = []
 
 abpost = ['感谢','谢谢','支持京东','强哥','给你好评','放心的京东','会一直支持的','会支持的','信赖京东']
 jieba.load_userdict('../coredata/customdict.txt')
 
-for i in range(15):
+for i in range(2):
     dbs = clencomment.find({}).limit(1000).skip(i*1000)
     analyseList = []
 
