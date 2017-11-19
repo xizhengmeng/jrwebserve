@@ -15,7 +15,7 @@ neglist = open('../coredata/neg.txt').read().split('\n')
 poslist = open('../coredata/pos.txt').read().split('\r')
 neulist = []
 
-abpost = ['感谢','谢谢','支持京东','强哥','给你好评','放心的京东','会一直支持的','会支持的','信赖京东']
+abpost = ['感谢','谢谢','支持京东','强哥','给你好评','放心的京东','会一直支持的','会支持的','信赖京东','京东越来越好']
 jieba.load_userdict('../coredata/customdict.txt')
 
 for i in range(2):
