@@ -51,8 +51,8 @@
       <file leaf-file-name="analysesentence.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/corefiles/analysesentence.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.55">
-              <caret line="50" column="37" selection-start-line="50" selection-start-column="37" selection-end-line="50" selection-end-column="37" />
+            <state vertical-scroll-proportion="-0.26">
+              <caret line="17" column="69" selection-start-line="17" selection-start-column="69" selection-end-line="17" selection-end-column="69" />
               <folding>
                 <element signature="e#24#38#0" expanded="true" />
               </folding>
@@ -64,7 +64,7 @@
         <entry file="file://$PROJECT_DIR$/coredata/fordelete.txt">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="114" column="2" selection-start-line="114" selection-start-column="2" selection-end-line="114" selection-end-column="2" />
+              <caret line="104" column="2" selection-start-line="104" selection-start-column="2" selection-end-line="104" selection-end-column="2" />
               <folding />
             </state>
           </provider>
@@ -74,7 +74,7 @@
         <entry file="file://$PROJECT_DIR$/coredata/neg.txt">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="17290" column="3" selection-start-line="17290" selection-start-column="3" selection-end-line="17290" selection-end-column="3" />
+              <caret line="17291" column="4" selection-start-line="17291" selection-start-column="4" selection-end-line="17291" selection-end-column="4" />
               <folding />
             </state>
           </provider>
@@ -108,7 +108,7 @@
         <entry file="file://$PROJECT_DIR$/coredata/customdict.txt">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="46" column="3" selection-start-line="46" selection-start-column="3" selection-end-line="46" selection-end-column="3" />
+              <caret line="48" column="4" selection-start-line="48" selection-start-column="4" selection-end-line="48" selection-end-column="4" />
               <folding />
             </state>
           </provider>
@@ -177,10 +177,10 @@
         <option value="$PROJECT_DIR$/corefiles/findunadd.py" />
         <option value="$PROJECT_DIR$/coredata/analyse.py" />
         <option value="$PROJECT_DIR$/corefiles/insertanalysebasedate.py" />
-        <option value="$PROJECT_DIR$/coredata/fordelete.txt" />
-        <option value="$PROJECT_DIR$/coredata/customdict.txt" />
         <option value="$PROJECT_DIR$/coredata/neg.txt" />
+        <option value="$PROJECT_DIR$/coredata/customdict.txt" />
         <option value="$PROJECT_DIR$/corefiles/analysesentence.py" />
+        <option value="$PROJECT_DIR$/coredata/fordelete.txt" />
       </list>
     </option>
   </component>
@@ -714,10 +714,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/coredata/fordelete.txt">
+    <entry file="file://$PROJECT_DIR$/coredata/neg.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="114" column="2" selection-start-line="114" selection-start-column="2" selection-end-line="114" selection-end-column="2" />
+          <caret line="17291" column="4" selection-start-line="17291" selection-start-column="4" selection-end-line="17291" selection-end-column="4" />
           <folding />
         </state>
       </provider>
@@ -725,23 +725,23 @@
     <entry file="file://$PROJECT_DIR$/coredata/customdict.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="46" column="3" selection-start-line="46" selection-start-column="3" selection-end-line="46" selection-end-column="3" />
+          <caret line="48" column="4" selection-start-line="48" selection-start-column="4" selection-end-line="48" selection-end-column="4" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/coredata/neg.txt">
+    <entry file="file://$PROJECT_DIR$/coredata/fordelete.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="17290" column="3" selection-start-line="17290" selection-start-column="3" selection-end-line="17290" selection-end-column="3" />
+          <caret line="104" column="2" selection-start-line="104" selection-start-column="2" selection-end-line="104" selection-end-column="2" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/corefiles/analysesentence.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.55">
-          <caret line="50" column="37" selection-start-line="50" selection-start-column="37" selection-end-line="50" selection-end-column="37" />
+        <state vertical-scroll-proportion="-0.26">
+          <caret line="17" column="69" selection-start-line="17" selection-start-column="69" selection-end-line="17" selection-end-column="69" />
           <folding>
             <element signature="e#24#38#0" expanded="true" />
           </folding>
