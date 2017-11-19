@@ -39,17 +39,22 @@ for i in range(2):
 
         seg_list = jieba.cut(forsearch)
 
-        for word in seg_list:
+        seg_listnew = []
+
+        for seg in seg_list:
+            seg_listnew.append(seg)
+
+        for word in seg_listnew:
             if word in poslist:
                #print '1'+word
                pass
             elif word in neglist:
-               lastindex = seg_list.index(word) - 1
+               lastindex = seg_listnew.index(word) - 1
                if lastindex >= 0:
-                   lastitem = seg_list[lastindex]
+                   lastitem = seg_listnew[lastindex]
+                   print 'last'+lastitem
                    if lastitem == '不' or lastitem == '没有' or lastitem == '非' or lastitem == '不是':
                        print 'fei' + lastitem + word
-                       pass
                    else:
                        print '2'+word
                        nominal = nominal - 1
