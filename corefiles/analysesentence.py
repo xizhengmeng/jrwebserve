@@ -19,7 +19,7 @@ abpost = ['感谢','谢谢','支持京东','强哥','给你好评','放心的京
 jieba.load_userdict('../coredata/customdict.txt')
 
 for i in range(15):
-    dbs = clencomment.find({}).limit(1000).skip(1)
+    dbs = clencomment.find({}).limit(1000).skip(i*1000)
     analyseList = []
 
     for item in dbs:
