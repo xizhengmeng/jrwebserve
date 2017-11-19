@@ -1,11 +1,12 @@
 # -*- coding: utf-8 -*-
 import os ,sys
 from pymongo import MongoClient
-import jieba
-
+import jieba,time
 
 reload(sys)
 sys.setdefaultencoding( "utf-8" )
+
+time1 = time.time()
 
 connection = MongoClient("localhost", 27017)
 mydbs = connection.Spider  # new a database
@@ -18,16 +19,23 @@ neulist = []
 abpost = ['非常满意','强烈好评','值得信赖的京东','京东支持','感谢','谢谢','支持京东','强哥','给你好评','放心的京东','会一直支持的','会支持的','信赖京东','京东越来越好']
 jieba.load_userdict('../coredata/customdict.txt')
 
-for i in range(15):
+count = 0
+
+for i in range(20):
     dbs = clencomment.find({}).limit(1000).skip(i*1000)
     analyseList = []
-
+    if dbs.count() == 0:
+       time2 = time.time()
+       print '退出'
+       print count
+       print time2 - time1
+       sys.exit(1)
     for item in dbs:
         nominal = 0
         #if len(item['forsearch']) > 100 or int(item['rating']) > 3:
         #   continue
         forsearch = item['forsearch']
-
+        count = count + 1
         isAbsuPos = False
         for setence in abpost:
             if setence in forsearch:
@@ -63,8 +71,11 @@ for i in range(15):
             else:
                #print '3'+word
                pass
-        if nominal != 0 and item['rating'] == 4:
+        item['hasanalyse'] = True
+        item['nominal'] = '%d' % nominal
+        if nominal != 0:
            print 'neg'+item['forsearch']
+
 
 #clencomment.remove({})
 
