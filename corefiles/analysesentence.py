@@ -8,26 +8,15 @@ reload(sys)
 sys.setdefaultencoding( "utf-8" )
 
 connection = MongoClient("localhost", 27017)
-mydb = connection.database  # new a database
-basedata = mydb.analysebasedata  # new a table
-
 mydbs = connection.Spider  # new a database
 clencomment = mydbs.CleanComment
 
-basedata = mydb.analysebasedata  # new a table
-
-basedbs = basedata.find({})
-
-neglist = []
-poslist = []
+neglist = open('../coredata/neg.txt').read().split('\r')
+poslist = open('../coredata/pos.txt').read().split('\r')
 neulist = []
 
 abpost = ['感谢','谢谢','好评','强哥','给你好评']
 jieba.load_userdict('../coredata/customdict.txt')
-
-for item in basedbs:
-    poslist = item['pos']
-    neglist = item['neg']
 
 for i in range(15):
     dbs = clencomment.find({}).limit(1000).skip(1)
@@ -39,22 +28,25 @@ for i in range(15):
         #   continue
         forsearch = item['forsearch']
 
+        isAbsuPos = False
         for setence in abpost:
             if setence in forsearch:
-               continue
+               print 'abpos'+forsearch
+               isAbsuPos = True
+
+        if isAbsuPos:
+           continue
 
         seg_list = jieba.cut(forsearch)
-        # print '**************' + '%d' % item['rating']
-        # print item['forsearch']
+
         for word in seg_list:
             if word in poslist:
-               #print word,'1'
-               pass
+               print '1'+word
             elif word in neglist:
-               print word, '-1'
+               print '2'+word
                nominal = nominal - 1
-        if nominal != 0 and item['rating'] == 5:
-           print item['forsearch'],nominal
+        # if nominal != 0 and item['rating'] == 5:
+        #    print item['forsearch'],nominal
 
 #clencomment.remove({})
 
