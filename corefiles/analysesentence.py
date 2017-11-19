@@ -15,7 +15,7 @@ neglist = open('../coredata/neg.txt').read().split('\r')
 poslist = open('../coredata/pos.txt').read().split('\r')
 neulist = []
 
-abpost = ['感谢','谢谢','好评','强哥','给你好评']
+abpost = ['感谢','谢谢','支持京东','强哥','给你好评']
 jieba.load_userdict('../coredata/customdict.txt')
 
 for i in range(15):
@@ -41,12 +41,25 @@ for i in range(15):
 
         for word in seg_list:
             if word in poslist:
-               print '1'+word
+               #print '1'+word
+               pass
             elif word in neglist:
-               print '2'+word
-               nominal = nominal - 1
-        # if nominal != 0 and item['rating'] == 5:
-        #    print item['forsearch'],nominal
+               lastindex = seg_list.index(word) - 1
+               if lastindex >= 0:
+                   lastitem = seg_list[lastindex]
+                   if lastitem == '不' or lastitem == '没有' or lastitem == '非' or lastitem == '不是':
+                       print 'fei' + lastitem + word
+                       pass
+                   else:
+                       print '2'+word
+                       nominal = nominal - 1
+               else:
+                   nominal = nominal - 1
+            else:
+               #print '3'+word
+               pass
+        if nominal != 0 and item['rating'] == 5:
+           print 'neg'+item['forsearch']
 
 #clencomment.remove({})
 
