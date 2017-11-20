@@ -14,9 +14,11 @@ mydb = connection.Spider # new a database
 comment = mydb.Comment # new a table
 clencomment = mydb.CleanComment
 
-dbs = clencomment.find({'userReviewId':'1234456'})
+dbs = clencomment.find({'userReviewId':'1878815456'})
 
 for item in dbs:
+    print item
     clencomment.remove({'userReviewId':item['userReviewId']})
     item['isneg'] = True
+    print item
     clencomment.insert(item)
