@@ -59,14 +59,20 @@ def searchComment(searchkey, sorekey, pageindex, pagesize,lastesttime,isneg):
     elif lastesttime == '3':
        daysl = -30
     else:
-       dbs = clencomment.find({'isneg':isneg,'forsearch': re.compile(searchkey)}).sort([('date',-1)]).limit(pagesize).skip(skipnumber)
+       if type(isneg) == type(None):
+          dbs = clencomment.find({'forsearch': re.compile(searchkey)}).sort([('date',-1)]).limit(pagesize).skip(skipnumber)
+       else:
+          dbs = clencomment.find({'isneg':isneg,'forsearch': re.compile(searchkey)}).sort([('date',-1)]).limit(pagesize).skip(skipnumber)
 
     if daysl != 0:
        now_time = datetime.datetime.now()
        now_time_string = now_time.strftime('%Y-%m-%d')
        yes_time = now_time + datetime.timedelta(days=daysl)
        yes_time_nyr = yes_time.strftime('%Y-%m-%d')
-       dbs = clencomment.find({'isneg':isneg,'forsearch': re.compile(searchkey),"date": {"$gte": yes_time_nyr, "$lt": now_time_string}}).sort([('date',-1)]).limit(pagesize).skip(skipnumber)
+       if type(isneg) == type(None):
+          dbs = clencomment.find({'forsearch': re.compile(searchkey),"date": {"$gte": yes_time_nyr, "$lt": now_time_string}}).sort([('date',-1)]).limit(pagesize).skip(skipnumber)
+       else:
+          dbs = clencomment.find({'isneg':isneg,'forsearch': re.compile(searchkey),"date": {"$gte": yes_time_nyr, "$lt": now_time_string}}).sort([('date',-1)]).limit(pagesize).skip(skipnumber)
 
     list = []
     for item in dbs:
