@@ -71,5 +71,6 @@ for item in dbs:
           forsearch = body + item['title']
           item['forsearch'] = forsearch
           clencomment.save(item)
+          idList.append(item['userReviewId'])
 
 
