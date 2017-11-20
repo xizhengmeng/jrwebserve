@@ -31,7 +31,7 @@ for i in range(20):
        print 'usetime',time2 - time1
        sys.exit(1)
     for item in dbs:
-        if item['hasanalyse'] == True:
+        if item.get('hasanalyse') == True:
            continue
         nominal = 0
         #if len(item['forsearch']) > 100 or int(item['rating']) > 3:
