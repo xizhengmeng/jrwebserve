@@ -33,6 +33,7 @@ for i in range(20):
     for item in dbs:
         if item.get('hasanalyse') == True:
            continue
+
         nominal = 0
         #if len(item['forsearch']) > 100 or int(item['rating']) > 3:
         #   continue

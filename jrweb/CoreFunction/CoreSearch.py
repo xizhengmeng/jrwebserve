@@ -17,7 +17,12 @@ comment = mydb.Comment  # new a table
 clencomment = mydb.CleanComment
 statistics = mydb.Statistics  # new a table
 
-def searchComment(searchkey, sorekey, pageindex, pagesize):
+def searchComment(searchkey, sorekey, pageindex, pagesize,lastesttime,isneg):
+    logger.info(type(lastesttime))
+    logger.info(type(isneg))
+    logger.info(lastesttime)
+    logger.info(isneg)
+
     if type(searchkey) == type(None):
         searchkey = ''
 
@@ -44,7 +49,24 @@ def searchComment(searchkey, sorekey, pageindex, pagesize):
 
     skipnumber = pagesize * pageindex
 
-    dbs = clencomment.find({'forsearch': re.compile(searchkey)}).sort([('date',-1)]).limit(pagesize).skip(skipnumber)
+    days = 0
+    dbs = []
+
+    if lastesttime == 1:
+       days = -3
+    elif lastesttime == 2:
+       days = -7
+    elif lastesttime == 3:
+       days = -30
+    else:
+       dbs = clencomment.find({'isneg':isneg,'forsearch': re.compile(searchkey)}).sort([('date',-1)]).limit(pagesize).skip(skipnumber)
+
+    if days != 0:
+       now_time = datetime.datetime.now()
+       now_time_string = now_time.strftime('%Y-%m-%d')
+       yes_time = now_time + datetime.timedelta(days=-30)
+       yes_time_nyr = yes_time.strftime('%Y-%m-%d')
+       dbs = clencomment.find({'isneg':isneg,'forsearch': re.compile(searchkey),"date": {"$gte": yes_time_nyr, "$lt": now_time_string}}).sort([('date',-1)]).limit(pagesize).skip(skipnumber)
 
     list = []
     for item in dbs:
@@ -153,7 +175,7 @@ def getcommentbaseinfo():
 
         returnList.append(itemDic)
 
-    returnList.sort(key=lambda k: (k.get('date', 0)), reverse=True)
+    returnList.sort(key=lambda k: (k.get('date', 0)), reverse=False)
 
     returnDic = {}
     returnDic['total'] = allcount
