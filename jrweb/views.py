@@ -32,7 +32,7 @@ def searchCommentFunction(request):
        isneg = request.POST.get('isneg')
        logger.info(request.POST.copy())
        logger.info(request.body)
-       logger.info({'searchkey':searchkey,'soreky':sorekey,'pageindex':pageindex,'pagesize':pagesize})
+       logger.info({'searchkey': searchkey, 'soreky': sorekey, 'pageindex': pageindex, 'pagesize': pagesize,'lastesttime': lastesttime,'isneg':isneg})
     elif request.method == 'GET':
        logger.info('GET')
        searchkey = request.GET.get('searchkey')
