@@ -18,7 +18,7 @@ clencomment = mydb.CleanComment
 idList = []
 count = 0
 
-for i in range(20):
+for i in range(30):
     dbs = clencomment.find({}).limit(1000).skip(i*1000)
 
     if dbs.count() == 0:
@@ -37,6 +37,7 @@ for i in range(20):
             print 'repeat' + item['body'] + item['date'] + item['userReviewId']
         else:
             print item['body'] + item['date'] + item['userReviewId']
+            idList.append(item['userReviewId'])
             count = count + 1
 
 
