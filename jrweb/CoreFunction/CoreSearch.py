@@ -55,6 +55,7 @@ def searchComment(searchkey, sorekey, pageindex, pagesize):
         dic['userName'] = item.get('name')
         dic['score'] = item.get('rating')
         dic['title'] = item.get('title')
+        dic['isneg'] = item.get('isneg')
         logger.info(dic['title'])
         dic['scondtime'] = item.get('time')
 
