@@ -107,11 +107,12 @@ def getcommentbaseinfo():
         time = item.get('date')
         timeitem = timedic.get(time)
         if type(timeitem) == type(None):
+            timeitem = {}
             isneg = item.get('isneg')
             if isneg:
-                timedic['negcount'] = 1
+                timeitem['negcount'] = 1
             else:
-                timedic['poscount'] = 1
+                timeitem['poscount'] = 1
         else:
             isneg = item.get('isneg')
             if isneg:
