@@ -24,13 +24,15 @@ count = 0
 for i in range(20):
     dbs = clencomment.find({}).limit(1000).skip(i*1000)
     analyseList = []
-    if dbs.count() == 0:
+    if dbs.count(True) == 0:
        time2 = time.time()
        print '退出'
        print count
        print 'usetime',time2 - time1
        sys.exit(1)
     for item in dbs:
+        if item['hasanalyse'] == True:
+           continue
         nominal = 0
         #if len(item['forsearch']) > 100 or int(item['rating']) > 3:
         #   continue
@@ -43,6 +45,10 @@ for i in range(20):
                isAbsuPos = True
 
         if isAbsuPos:
+           item['hasanalyse'] = True
+           item['isneg'] = False
+           clencomment.remove({'userReviewId':item['userReviewId']})
+           clencomment.insert(item)
            continue
 
         seg_list = jieba.cut(forsearch)
@@ -73,11 +79,14 @@ for i in range(20):
                pass
         item['hasanalyse'] = True
         item['nominal'] = '%d' % nominal
+        if nominal < 0:
+           item['isneg'] = True
+        else:
+           item['isneg'] = False
+        clencomment.remove({'userReviewId':item['userReviewId']})
+        clencomment.insert(item)
         if nominal != 0:
-           print 'neg'+item['forsearch']
+           print 'neg',item['isneg'],item['forsearch']
 
 
-#clencomment.remove({})
 
-#for item in analyseList:
-#    clencomment.save(item)

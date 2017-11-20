@@ -4,6 +4,7 @@ import os,sys
 import pymongo
 import re
 import time
+import datetime
 
 reload(sys)
 sys.setdefaultencoding( "utf-8" )
@@ -16,15 +17,24 @@ comment = mydb.Comment # new a table
 clencomment = mydb.CleanComment
 
 idList = []
-count = 0
-
-for i in range(30):
+countn = 0
+for i in range(1):
     dbs = clencomment.find({}).limit(1000).skip(i*1000)
+    
+    now_time = datetime.datetime.now()
+    now_time_string = now_time.strftime('%Y-%m-%d')
+    yes_time = now_time + datetime.timedelta(days=-10)
+    yes_time_nyr = yes_time.strftime('%Y-%m-%d')
+
+    print now_time_string,yes_time_nyr
+
+    dbs = clencomment.find({"date": {"$gte": yes_time_nyr, "$lt": now_time_string}})
+
     print 'count',dbs.count,i*1000
-    if dbs.count() == 0:
+    if dbs.count(True) == 0:
        time2 = time.time()
        print '退出'
-       print count
+       print countn
        print 'usetime',time2 - time1
        sys.exit(1)
 #dbs = comment.find({'body':re.compile('白条')}).sort([('date',1)]).limit(10).skip(20)
@@ -36,10 +46,11 @@ for i in range(30):
         if item['userReviewId'] in idList:
             print 'repeat' + item['body'] + item['date'] + item['userReviewId']
             clencomment.remove({'userReviewId':item['userReviewId']})
+            clencomment.insert(item)
         else:
-            print item['body'] + item['date'] + item['userReviewId']
+            print item['body'] + item['date'] + item['userReviewId'],item.get('isneg')
             idList.append(item['userReviewId'])
-            count = count + 1
+            countn = countn + 1
 
 
-print count
+print countn

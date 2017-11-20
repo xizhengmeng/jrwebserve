@@ -4,6 +4,7 @@ import os, time, json ,sys
 from pymongo import MongoClient
 import re
 import logging
+import datetime
 #
 logger = logging.getLogger('sourceDns.webdns.views')
 
@@ -77,5 +78,64 @@ def createKeyWordList():
     resultDic['code'] = '0000'
 
     resultString = json.dumps(resultDic)
+
+    return resultString
+
+def getcommentbaseinfo():
+    allcomment = mydb.find({})
+    cleancomment = clencomment.find({})
+
+    allcount = allcomment.count()
+    clencount = clencomment.count()
+
+    negcomment = clencomment.find({'isneg':True})
+    negcount = negcomment.count()
+
+    poscount = clencount - negcount
+
+    now_time = datetime.datetime.now()
+    now_time_string = now_time.strftime('%Y-%m-%d')
+    yes_time = now_time + datetime.timedelta(days=-30)
+    yes_time_nyr = yes_time.strftime('%Y-%m-%d')
+
+    dbs = clencomment.find({"date": {"$gte": yes_time_nyr, "$lt": now_time_string}})
+
+    returnList = []
+
+    lasttime = ''
+    lastdic = {}
+    for item in dbs:
+        time = item.get('date')
+        if len(lasttime) and lasttime == time:
+            isneg = item['isneg']
+            if isneg:
+                negcount = lastdic.get('negcount')
+                negcount = negcount + 1
+                lastdic['negcount'] = negcount
+            else:
+                poscount = lastdic.get('poscount')
+                poscount = negcount + 1
+                lastdic['poscount'] = poscount
+
+        else:
+            isneg = item['isneg']
+            lastdic = {}
+            returnList.append(lastdic)
+            lastdic['time'] = time
+            if isneg:
+                lastdic['negcount'] = 1
+            else:
+                lastdic['poscount'] = 1
+
+
+
+    returnDic = {}
+    returnDic['allcount'] = allcount
+    returnDic['clencount'] = clencount
+    returnDic['negcount'] = negcount
+    returnDic['poscount'] = poscount
+    returnDic['commentlist'] = returnList
+
+    resultString = json.dumps(returnDic)
 
     return resultString
