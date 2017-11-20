@@ -158,8 +158,8 @@ def getcommentbaseinfo():
     returnDic = {}
     returnDic['total'] = allcount
     returnDic['valid'] = clencount
-    returnDic['goodEvt'] = negcount
-    returnDic['badEvt'] = poscount
+    returnDic['goodEvt'] = poscount
+    returnDic['badEvt'] = negcount
     returnDic['EvtList'] = returnList
 
     resultDic = {}
