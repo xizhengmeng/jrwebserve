@@ -102,32 +102,39 @@ def getcommentbaseinfo():
 
     returnList = []
 
-    lasttime = ''
-    lastdic = {}
+    timedic = {}
     for item in dbs:
         time = item.get('date')
-        if len(lasttime) and lasttime == time:
-            isneg = item['isneg']
+        timeitem = timedic.get(time)
+        if type(timeitem) == type(None):
+            isneg = item.get('isneg')
             if isneg:
-                negcount = lastdic.get('negcount')
-                negcount = negcount + 1
-                lastdic['negcount'] = negcount
+                timedic['negcount'] = 1
             else:
-                poscount = lastdic.get('poscount')
-                poscount = negcount + 1
-                lastdic['poscount'] = poscount
-
+                timedic['poscount'] = 1
         else:
-            isneg = item['isneg']
-            lastdic = {}
-            returnList.append(lastdic)
-            lastdic['time'] = time
+            isneg = item.get('isneg')
             if isneg:
-                lastdic['negcount'] = 1
+                negcount = timeitem.get('negcount')
+                negcount = negcount + 1
+                timeitem['negcount'] = negcount
             else:
-                lastdic['poscount'] = 1
+                poscount = timeitem.get('poscount')
+                poscount = negcount + 1
+                timeitem['poscount'] = poscount
 
+    keys = timedic.keys()
+    for key in keys:
+        countItem = timedic.get(key)
+        poscount = countItem['poscount']
+        negcount = countItem['negcount']
 
+        itemDic = {}
+        itemDic['time'] = key
+        itemDic['poscount'] = poscount
+        itemDic['negcount'] = negcount
+
+        returnList.append(itemDic)
 
     returnDic = {}
     returnDic['allcount'] = allcount

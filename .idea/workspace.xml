@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e7f50ca6-493a-4bac-b47f-1ed4de801187" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jrweb/corefunction/CoreSearch.py" afterPath="$PROJECT_DIR$/jrweb/corefunction/CoreSearch.py" />
-    </list>
+    <list default="true" id="e7f50ca6-493a-4bac-b47f-1ed4de801187" name="Default" comment="" />
     <ignored path=".idea/dataSources.local.xml" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -99,8 +97,8 @@
       <file leaf-file-name="CoreSearch.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/jrweb/corefunction/CoreSearch.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="143">
-              <caret line="84" column="24" lean-forward="false" selection-start-line="84" selection-start-column="24" selection-end-line="84" selection-end-column="24" />
+            <state relative-caret-position="627">
+              <caret line="136" column="33" lean-forward="false" selection-start-line="136" selection-start-column="33" selection-end-line="136" selection-end-column="33" />
               <folding>
                 <element signature="e#25#51#0" expanded="true" />
               </folding>
@@ -150,6 +148,7 @@
       <find>idList</find>
       <find>缩小</find>
       <find>statistics</find>
+      <find>sort</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -363,7 +362,7 @@
         <state relative-caret-position="180">
           <caret line="14" column="20" lean-forward="false" selection-start-line="14" selection-start-column="20" selection-end-line="14" selection-end-column="20" />
           <folding>
-            <element signature="e#24#38#0" expanded="true" />
+            <element signature="e#24#38#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -612,7 +611,7 @@
         <state relative-caret-position="180">
           <caret line="14" column="20" lean-forward="false" selection-start-line="14" selection-start-column="20" selection-end-line="14" selection-end-column="20" />
           <folding>
-            <element signature="e#24#38#0" expanded="true" />
+            <element signature="e#24#38#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -713,8 +712,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/jrweb/corefunction/CoreSearch.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="143">
-          <caret line="84" column="24" lean-forward="false" selection-start-line="84" selection-start-column="24" selection-end-line="84" selection-end-column="24" />
+        <state relative-caret-position="627">
+          <caret line="136" column="33" lean-forward="false" selection-start-line="136" selection-start-column="33" selection-end-line="136" selection-end-column="33" />
           <folding>
             <element signature="e#25#51#0" expanded="true" />
           </folding>
