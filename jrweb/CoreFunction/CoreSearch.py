@@ -49,22 +49,22 @@ def searchComment(searchkey, sorekey, pageindex, pagesize,lastesttime,isneg):
 
     skipnumber = pagesize * pageindex
 
-    days = 0
+    daysl = 0
     dbs = []
 
     if lastesttime == 1:
-       days = -3
+       daysl = -3
     elif lastesttime == 2:
-       days = -7
+       daysl = -7
     elif lastesttime == 3:
-       days = -30
+       daysl = -30
     else:
        dbs = clencomment.find({'isneg':isneg,'forsearch': re.compile(searchkey)}).sort([('date',-1)]).limit(pagesize).skip(skipnumber)
 
-    if days != 0:
+    if daysl != 0:
        now_time = datetime.datetime.now()
        now_time_string = now_time.strftime('%Y-%m-%d')
-       yes_time = now_time + datetime.timedelta(days=-30)
+       yes_time = now_time + datetime.timedelta(days=daysl)
        yes_time_nyr = yes_time.strftime('%Y-%m-%d')
        dbs = clencomment.find({'isneg':isneg,'forsearch': re.compile(searchkey),"date": {"$gte": yes_time_nyr, "$lt": now_time_string}}).sort([('date',-1)]).limit(pagesize).skip(skipnumber)
 
