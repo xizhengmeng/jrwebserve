@@ -46,7 +46,7 @@ def searchCommentFunction(request):
     else:
        return HttpResponse('no request body')
 
-    searchResultString = searchComment(searchkey,sorekey,pageindex,pagesize)
+    searchResultString = searchComment(searchkey,sorekey,pageindex,pagesize,lastesttime,isneg)
     return HttpResponse(searchResultString)
 
 def getKeyWordFunction(request):
