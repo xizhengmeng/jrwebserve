@@ -13,7 +13,7 @@ sys.setdefaultencoding("utf-8")
 
 connection = MongoClient("localhost", 27017)
 mydb = connection.Spider  # new a database
-#comment = mydb.Comment  # new a table
+comment = mydb.Comment  # new a table
 clencomment = mydb.CleanComment
 statistics = mydb.Statistics  # new a table
 
@@ -82,7 +82,7 @@ def createKeyWordList():
     return resultString
 
 def getcommentbaseinfo():
-    allcomment = mydb.find({})
+    allcomment = comment.find({})
     cleancomment = clencomment.find({})
 
     allcount = allcomment.count()
