@@ -132,10 +132,18 @@ def getcommentbaseinfo():
                 timeitem['poscount'] = poscount
 
     keys = timedic.keys()
+    logger.info(keys)
+    logger.info(timedic)
     for key in keys:
         countItem = timedic.get(key)
-        poscount = countItem['poscount']
-        negcount = countItem['negcount']
+        poscount = countItem.get('poscount')
+        negcount = countItem.get('negcount')
+
+        if type(poscount) == type(None):
+            poscount = 0
+
+        if type(negcount) == type(None):
+            negcount = 0
 
         itemDic = {}
         itemDic['time'] = key
