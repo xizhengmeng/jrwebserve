@@ -3,29 +3,41 @@
 import os,sys
 import pymongo
 import re
+import time
 
 reload(sys)
 sys.setdefaultencoding( "utf-8" )
+
+time1 = time.time()
 
 connection = pymongo.MongoClient("localhost",27017)
 mydb = connection.Spider # new a database
 comment = mydb.Comment # new a table
 clencomment = mydb.CleanComment
 
-dbs = clencomment.find({})
+idList = []
+count = 0
 
+for i in range(20):
+    dbs = clencomment.find({}).limit(1000).skip(i*1000)
+
+    if dbs.count() == 0:
+       time2 = time.time()
+       print '退出'
+       print count
+       print 'usetime',time2 - time1
+       sys.exit(1)
 #dbs = comment.find({'body':re.compile('白条')}).sort([('date',1)]).limit(10).skip(20)
 #dbs = comment.find({'body':re.compile('白条')}).sort([('date',1)]).limit(20)
 #dbs = comment.find({'body':re.compile('不好')})
 
-idList = []
 
-count = 0
-for item in dbs:
-    if item['userReviewId'] in idList:
-        print 'repeat' + item['body'] + item['date'] + item['userReviewId']
-    else:
-        print item['body'] + item['date'] + item['userReviewId']
-        count = count + 1
+    for item in dbs:
+        if item['userReviewId'] in idList:
+            print 'repeat' + item['body'] + item['date'] + item['userReviewId']
+        else:
+            print item['body'] + item['date'] + item['userReviewId']
+            count = count + 1
+
 
 print count

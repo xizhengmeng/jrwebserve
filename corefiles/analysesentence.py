@@ -28,7 +28,7 @@ for i in range(20):
        time2 = time.time()
        print '退出'
        print count
-       print time2 - time1
+       print 'usetime',time2 - time1
        sys.exit(1)
     for item in dbs:
         nominal = 0
