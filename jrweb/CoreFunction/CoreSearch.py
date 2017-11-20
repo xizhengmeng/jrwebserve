@@ -90,9 +90,9 @@ def getcommentbaseinfo():
     clencount = clencomment.count()
 
     negcomment = clencomment.find({'isneg':True})
-    negcount = negcomment.count()
+    negcountn = negcomment.count()
 
-    poscount = clencount - negcount
+    poscountn = clencount - negcountn
 
     now_time = datetime.datetime.now()
     now_time_string = now_time.strftime('%Y-%m-%d')
@@ -158,8 +158,8 @@ def getcommentbaseinfo():
     returnDic = {}
     returnDic['total'] = allcount
     returnDic['valid'] = clencount
-    returnDic['goodEvt'] = poscount
-    returnDic['badEvt'] = negcount
+    returnDic['goodEvt'] = poscountn
+    returnDic['badEvt'] = negcountn
     returnDic['EvtList'] = returnList
 
     resultDic = {}
