@@ -152,6 +152,8 @@ def getcommentbaseinfo():
 
         returnList.append(itemDic)
 
+    returnList.sort(key=lambda k: (k.get('date', 0)), reverse=True)
+
     returnDic = {}
     returnDic['total'] = allcount
     returnDic['valid'] = clencount
