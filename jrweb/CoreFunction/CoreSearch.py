@@ -108,6 +108,7 @@ def getcommentbaseinfo():
         timeitem = timedic.get(time)
         if type(timeitem) == type(None):
             timeitem = {}
+            timedic[time] = timeitem
             isneg = item.get('isneg')
             if isneg:
                 timeitem['negcount'] = 1
@@ -117,11 +118,17 @@ def getcommentbaseinfo():
             isneg = item.get('isneg')
             if isneg:
                 negcount = timeitem.get('negcount')
-                negcount = negcount + 1
+                if type(negcount) == type(None):
+                    negcount = 1
+                else:
+                    negcount = negcount + 1
                 timeitem['negcount'] = negcount
             else:
                 poscount = timeitem.get('poscount')
-                poscount = negcount + 1
+                if type(poscount) == type(None):
+                    poscount = 1
+                else:
+                    poscount = poscount + 1
                 timeitem['poscount'] = poscount
 
     keys = timedic.keys()
