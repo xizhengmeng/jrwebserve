@@ -20,7 +20,7 @@ count = 0
 
 for i in range(30):
     dbs = clencomment.find({}).limit(1000).skip(i*1000)
-
+    print 'count',dbs.count,i*1000
     if dbs.count() == 0:
        time2 = time.time()
        print '退出'
@@ -35,6 +35,7 @@ for i in range(30):
     for item in dbs:
         if item['userReviewId'] in idList:
             print 'repeat' + item['body'] + item['date'] + item['userReviewId']
+            clencomment.remove({'userReviewId':item['userReviewId']})
         else:
             print item['body'] + item['date'] + item['userReviewId']
             idList.append(item['userReviewId'])
