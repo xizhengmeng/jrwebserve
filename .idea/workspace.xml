@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e7f50ca6-493a-4bac-b47f-1ed4de801187" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jrweb/CoreFunction/CoreSearch.py" afterPath="$PROJECT_DIR$/jrweb/CoreFunction/CoreSearch.py" />
     </list>
     <ignored path=".idea/dataSources.local.xml" />
@@ -48,8 +47,8 @@
       <file leaf-file-name="CoreSearch.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/jrweb/CoreFunction/CoreSearch.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.8074534">
-              <caret line="66" column="58" selection-start-line="66" selection-start-column="58" selection-end-line="66" selection-end-column="58" />
+            <state vertical-scroll-proportion="0.46583852">
+              <caret line="58" column="26" selection-start-line="58" selection-start-column="26" selection-end-line="58" selection-end-column="26" />
               <folding>
                 <element signature="e#25#51#0" expanded="true" />
               </folding>
@@ -687,8 +686,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/jrweb/CoreFunction/CoreSearch.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.8074534">
-          <caret line="66" column="58" selection-start-line="66" selection-start-column="58" selection-end-line="66" selection-end-column="58" />
+        <state vertical-scroll-proportion="0.46583852">
+          <caret line="58" column="26" selection-start-line="58" selection-start-column="26" selection-end-line="58" selection-end-column="26" />
           <folding>
             <element signature="e#25#51#0" expanded="true" />
           </folding>

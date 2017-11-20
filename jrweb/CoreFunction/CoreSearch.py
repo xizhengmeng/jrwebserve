@@ -52,11 +52,11 @@ def searchComment(searchkey, sorekey, pageindex, pagesize,lastesttime,isneg):
     daysl = 0
     dbs = []
 
-    if lastesttime == 1:
+    if lastesttime == '1':
        daysl = -3
-    elif lastesttime == 2:
+    elif lastesttime == '2':
        daysl = -7
-    elif lastesttime == 3:
+    elif lastesttime == '3':
        daysl = -30
     else:
        dbs = clencomment.find({'isneg':isneg,'forsearch': re.compile(searchkey)}).sort([('date',-1)]).limit(pagesize).skip(skipnumber)
