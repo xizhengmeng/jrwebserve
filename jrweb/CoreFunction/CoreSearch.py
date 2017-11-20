@@ -146,19 +146,23 @@ def getcommentbaseinfo():
             negcount = 0
 
         itemDic = {}
-        itemDic['time'] = key
-        itemDic['poscount'] = poscount
-        itemDic['negcount'] = negcount
+        itemDic['date'] = key
+        itemDic['goodEvt'] = poscount
+        itemDic['badEvt'] = negcount
 
         returnList.append(itemDic)
 
     returnDic = {}
-    returnDic['allcount'] = allcount
-    returnDic['clencount'] = clencount
-    returnDic['negcount'] = negcount
-    returnDic['poscount'] = poscount
-    returnDic['commentlist'] = returnList
+    returnDic['total'] = allcount
+    returnDic['valid'] = clencount
+    returnDic['goodEvt'] = negcount
+    returnDic['badEvt'] = poscount
+    returnDic['EvtList'] = returnList
 
-    resultString = json.dumps(returnDic)
+    resultDic = {}
+    resultDic['resultData'] = returnDic
+    resultDic['code'] = '0000'
+
+    resultString = json.dumps(resultDic)
 
     return resultString
