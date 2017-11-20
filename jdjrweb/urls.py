@@ -21,6 +21,7 @@ urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'test', jrviews.test),
     url(r'^jdjrsearchcomment/', jrviews.searchCommentFunction),
-    url(r'^getkeywords/', jrviews.getKeyWordFunction)
+    url(r'^getkeywords/', jrviews.getKeyWordFunction),
+    url(r'^getbaseinfo/', jrviews.getBaseInfoFunction)
     # url(r'^$', jrviews.home,name='home'),  # new
 ]
