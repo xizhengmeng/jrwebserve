@@ -37,7 +37,7 @@ for i in range(20):
         nominal = 0
         #if len(item['forsearch']) > 100 or int(item['rating']) > 3:
         #   continue
-        forsearch = item['forsearch']
+        forsearch = item.get('forsearch')
         count = count + 1
         isAbsuPos = False
         for setence in abpost:

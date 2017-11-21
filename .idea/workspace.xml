@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e7f50ca6-493a-4bac-b47f-1ed4de801187" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jrweb/corefunction/CoreSearch.py" afterPath="$PROJECT_DIR$/jrweb/corefunction/CoreSearch.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/corefiles/analysesentence.py" afterPath="$PROJECT_DIR$/corefiles/analysesentence.py" />
     </list>
     <ignored path=".idea/dataSources.local.xml" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -20,6 +21,18 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="analysesentence.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/corefiles/analysesentence.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="256">
+              <caret line="39" column="41" lean-forward="false" selection-start-line="39" selection-start-column="41" selection-end-line="39" selection-end-column="41" />
+              <folding>
+                <element signature="e#24#38#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/jrweb/views.py">
           <provider selected="true" editor-type-id="text-editor">
@@ -40,7 +53,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CoreSearch.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="CoreSearch.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/jrweb/corefunction/CoreSearch.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="320">
@@ -107,7 +120,6 @@
         <option value="$PROJECT_DIR$/coredata/analyse.py" />
         <option value="$PROJECT_DIR$/corefiles/findall.py" />
         <option value="$PROJECT_DIR$/jdjrweb/urls.py" />
-        <option value="$PROJECT_DIR$/corefiles/analysesentence.py" />
         <option value="$PROJECT_DIR$/jrweb/CoreFunction/CoreSearch.py" />
         <option value="$PROJECT_DIR$/coredata/customdict.txt" />
         <option value="$PROJECT_DIR$/corefiles/changeisneg.py" />
@@ -115,6 +127,7 @@
         <option value="$PROJECT_DIR$/coredata/fordelete.txt" />
         <option value="$PROJECT_DIR$/coredata/neg.txt" />
         <option value="$PROJECT_DIR$/jrweb/corefunction/CoreSearch.py" />
+        <option value="$PROJECT_DIR$/corefiles/analysesentence.py" />
       </list>
     </option>
   </component>
@@ -750,16 +763,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/corefiles/analysesentence.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-472">
-          <caret line="32" column="20" lean-forward="false" selection-start-line="32" selection-start-column="20" selection-end-line="32" selection-end-column="20" />
-          <folding>
-            <element signature="e#24#38#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/jdjrweb/urls.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="300">
@@ -834,6 +837,16 @@
           <caret line="102" column="25" lean-forward="true" selection-start-line="102" selection-start-column="25" selection-end-line="102" selection-end-column="25" />
           <folding>
             <element signature="e#25#51#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/corefiles/analysesentence.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="256">
+          <caret line="39" column="41" lean-forward="false" selection-start-line="39" selection-start-column="41" selection-end-line="39" selection-end-column="41" />
+          <folding>
+            <element signature="e#24#38#0" expanded="true" />
           </folding>
         </state>
       </provider>
