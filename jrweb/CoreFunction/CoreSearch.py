@@ -61,7 +61,11 @@ def searchComment(searchkey, sorekey, pageindex, pagesize,lastesttime,isneg):
     else:
        searchDic = {}
        if searchkey != '':
-         searchDic['forsearch'] = re.compile(searchkey)
+         if isneg == '0':
+            searchDic['body'] = re.compile(searchkey)
+         else:
+            searchDic['forsearch'] = re.compile(searchkey)
+
        if isneg == '0':
          dbs = comment.find(searchDic).sort([('date', -1)]).limit(pagesize).skip(skipnumber)
        elif isneg == '1':
@@ -87,7 +91,10 @@ def searchComment(searchkey, sorekey, pageindex, pagesize,lastesttime,isneg):
 
        searchDic = {}
        if searchkey != '':
-           searchDic['forsearch'] = re.compile(searchkey)
+           if isneg == '0':
+               searchDic['body'] = re.compile(searchkey)
+           else:
+               searchDic['forsearch'] = re.compile(searchkey)
 
        if isneg == '0':
          searchDic['date'] = {"$gte": yes_time_nyr, "$lt": now_time_string}
