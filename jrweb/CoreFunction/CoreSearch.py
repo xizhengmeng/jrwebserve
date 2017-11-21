@@ -62,7 +62,6 @@ def searchComment(searchkey, sorekey, pageindex, pagesize,lastesttime,isneg):
        searchDic = {}
        if searchkey != '':
          searchDic['forsearch'] = re.compile(searchkey)
-
        if isneg == '1':
          dbs = clencomment.find(searchDic).sort([('date', -1)]).limit(pagesize).skip(skipnumber)
        elif isneg == '2':
@@ -77,7 +76,6 @@ def searchComment(searchkey, sorekey, pageindex, pagesize,lastesttime,isneg):
          dbs = comment.find(searchDic).sort([('date', -1)]).limit(pagesize).skip(skipnumber)
        else:
          return 'isneg can not be None'
-
 
     if daysl != 0:
        now_time = datetime.datetime.now()
