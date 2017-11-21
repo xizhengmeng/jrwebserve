@@ -61,17 +61,17 @@ def searchComment(searchkey, sorekey, pageindex, pagesize,lastesttime,isneg):
     else:
        searchDic = {}
        if searchkey != '':
-           searchDic['forsearch'] = re.compile(searchkey)
+         searchDic['forsearch'] = re.compile(searchkey)
 
        if isneg == '1':
-         isneg = True
-         searchDic['isneg'] = isneg
-         dbs = clencomment.find(searchDic).sort([('date',-1)]).limit(pagesize).skip(skipnumber)
+         dbs = clencomment.find(searchDic).sort([('date', -1)]).limit(pagesize).skip(skipnumber)
        elif isneg == '2':
-         isneg = False
+         isneg = True
          searchDic['isneg'] = isneg
          dbs = clencomment.find(searchDic).sort([('date', -1)]).limit(pagesize).skip(skipnumber)
        elif isneg == '3':
+         isneg = False
+         searchDic['isneg'] = isneg
          dbs = clencomment.find(searchDic).sort([('date', -1)]).limit(pagesize).skip(skipnumber)
        elif isneg == '0':
          dbs = comment.find(searchDic).sort([('date', -1)]).limit(pagesize).skip(skipnumber)
