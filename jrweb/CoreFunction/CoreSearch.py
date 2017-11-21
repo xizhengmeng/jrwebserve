@@ -86,7 +86,7 @@ def searchComment(searchkey, sorekey, pageindex, pagesize,lastesttime,isneg):
           elif isneg == '2':
              isneg = False
              dbs = clencomment.find({'isneg': isneg, 'forsearch': re.compile(searchkey),"date": {"$gte": yes_time_nyr, "$lt": now_time_string}}).sort([('date', -1)]).limit(pagesize).skip(skipnumber)
-          elif isneg == 3:
+          elif isneg == '3':
              dbs = clencomment.find({'forsearch': re.compile(searchkey),"date": {"$gte": yes_time_nyr, "$lt": now_time_string}}).sort([('date', -1)]).limit(pagesize).skip(skipnumber)
 
 
