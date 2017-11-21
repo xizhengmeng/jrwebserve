@@ -62,20 +62,21 @@ def searchComment(searchkey, sorekey, pageindex, pagesize,lastesttime,isneg):
        searchDic = {}
        if searchkey != '':
          searchDic['forsearch'] = re.compile(searchkey)
-       if isneg == '1':
-         dbs = clencomment.find(searchDic).sort([('date', -1)]).limit(pagesize).skip(skipnumber)
+       if isneg == '1' or isneg == '0':
+         pass
        elif isneg == '2':
          isneg = True
          searchDic['isneg'] = isneg
-         dbs = clencomment.find(searchDic).sort([('date', -1)]).limit(pagesize).skip(skipnumber)
+         # dbs = clencomment.find(searchDic).sort([('date', -1)]).limit(pagesize).skip(skipnumber)
        elif isneg == '3':
          isneg = False
          searchDic['isneg'] = isneg
-         dbs = clencomment.find(searchDic).sort([('date', -1)]).limit(pagesize).skip(skipnumber)
-       elif isneg == '0':
-         dbs = comment.find(searchDic).sort([('date', -1)]).limit(pagesize).skip(skipnumber)
+         # dbs = clencomment.find(searchDic).sort([('date', -1)]).limit(pagesize).skip(skipnumber)
        else:
          return 'isneg can not be None'
+
+       logger.info(searchDic)
+       dbs = clencomment.find(searchDic).sort([('date', -1)]).limit(pagesize).skip(skipnumber)
 
     if daysl != 0:
        now_time = datetime.datetime.now()
@@ -87,27 +88,24 @@ def searchComment(searchkey, sorekey, pageindex, pagesize,lastesttime,isneg):
        if searchkey != '':
            searchDic['forsearch'] = re.compile(searchkey)
 
-       if isneg == '1':
+       if isneg == '1' or isneg == '0':
          searchDic['date'] = {"$gte": yes_time_nyr, "$lt": now_time_string}
-         dbs = clencomment.find(searchDic).sort([('date', -1)]).limit(pagesize).skip(skipnumber)
+
        elif isneg == '2':
          isneg = True
          searchDic['isneg'] = isneg
          searchDic['date'] = {"$gte": yes_time_nyr, "$lt": now_time_string}
-         dbs = clencomment.find(searchDic).sort([('date', -1)]).limit(pagesize).skip(skipnumber)
+         # dbs = clencomment.find(searchDic).sort([('date', -1)]).limit(pagesize).skip(skipnumber)
        elif isneg == '3':
          isneg = False
          searchDic['isneg'] = isneg
          searchDic['date'] = {"$gte": yes_time_nyr, "$lt": now_time_string}
-         dbs = clencomment.find(searchDic).sort([('date', -1)]).limit(pagesize).skip(skipnumber)
-       elif isneg == '0':
-         searchDic['date'] = {"$gte": yes_time_nyr, "$lt": now_time_string}
-         dbs = comment.find(searchDic).sort([('date', -1)]).limit(pagesize).skip(skipnumber)
+         # dbs = clencomment.find(searchDic).sort([('date', -1)]).limit(pagesize).skip(skipnumber)
        else:
          return 'isneg can not be None'
 
-
-
+       logger.info(searchDic)
+       dbs = clencomment.find(searchDic).sort([('date', -1)]).limit(pagesize).skip(skipnumber)
 
           #dbs = clencomment.find({'isneg':isneg,'forsearch': re.compile(searchkey),"date": {"$gte": yes_time_nyr, "$lt": now_time_string}}).sort([('date',-1)]).limit(pagesize).skip(skipnumber)
 
