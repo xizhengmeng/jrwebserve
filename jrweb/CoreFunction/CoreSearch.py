@@ -88,16 +88,16 @@ def searchComment(searchkey, sorekey, pageindex, pagesize,lastesttime,isneg):
            searchDic['forsearch'] = re.compile(searchkey)
 
        if isneg == '1':
-         isneg = True
-         searchDic['isneg'] = isneg
          searchDic['date'] = {"$gte": yes_time_nyr, "$lt": now_time_string}
-         dbs = clencomment.find(searchDic).sort([('date',-1)]).limit(pagesize).skip(skipnumber)
+         dbs = clencomment.find(searchDic).sort([('date', -1)]).limit(pagesize).skip(skipnumber)
        elif isneg == '2':
-         isneg = False
+         isneg = True
          searchDic['isneg'] = isneg
          searchDic['date'] = {"$gte": yes_time_nyr, "$lt": now_time_string}
          dbs = clencomment.find(searchDic).sort([('date', -1)]).limit(pagesize).skip(skipnumber)
        elif isneg == '3':
+         isneg = False
+         searchDic['isneg'] = isneg
          searchDic['date'] = {"$gte": yes_time_nyr, "$lt": now_time_string}
          dbs = clencomment.find(searchDic).sort([('date', -1)]).limit(pagesize).skip(skipnumber)
        elif isneg == '0':
