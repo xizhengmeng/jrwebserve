@@ -1,11 +1,8 @@
 #!/usr/bin/env python
 # coding:utf-8
 import os,sys
-import pyperclip
 
 from bayes import *
-
-
 # testingNB()
 
 flist = open('negtest.txt','r').read().split('\n')
