@@ -70,6 +70,8 @@ for item in dbs:
        if checkIfisuseful(body,date) == True:
           print 'clencomment insert new ' + item['date'] + body
           forsearch = body + item['title']
+          forsearch = forsearch.lower()
+          forsearch = forsearch.replace(' ','')
           item['forsearch'] = forsearch
 
           if type(forsearch) == type(None):
