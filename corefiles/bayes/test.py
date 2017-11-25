@@ -9,6 +9,7 @@ from bayes import *
 # testingNB()
 
 flist = open('negtest.txt','r').read().split('\n')
+# flist = open('postest.txt','r').read().split('\n')
 
 count = 0
 
@@ -19,8 +20,4 @@ for line in flist:
 
 print '\n'
 print '\n'
-print '5000数据量测试--正确率 %f' % ((1.0 * (len(flist) - count)) / len(flist) * 100)
-
-
-# clf = joblib.load("train_model.m")
-# clf.predict(test_X)
+print '正确率 %f' % ((1.0 * (len(flist) - count)) / len(flist) * 100)
