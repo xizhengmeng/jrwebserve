@@ -14,6 +14,8 @@ clencomment = mydb.CleanComment
 
 cleanall = clencomment.find({})
 
+jieba.load_userdict('../coredata/customdict.txt')
+
 keyword = {}
 
 for item in cleanall:	

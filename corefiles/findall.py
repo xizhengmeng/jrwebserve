@@ -18,7 +18,7 @@ clencomment = mydb.CleanComment
 
 idList = []
 countn = 0
-for i in range(1):
+for i in range(30):
     dbs = clencomment.find({}).limit(1000).skip(i*1000)
     
     now_time = datetime.datetime.now()
@@ -28,7 +28,7 @@ for i in range(1):
 
     print now_time_string,yes_time_nyr
 
-    dbs = clencomment.find({"date": {"$gte": yes_time_nyr, "$lt": now_time_string}})
+    #dbs = clencomment.find({"date": {"$gte": yes_time_nyr, "$lt": now_time_string}})
 
     print 'count',dbs.count,i*1000
     if dbs.count(True) == 0:
@@ -48,7 +48,14 @@ for i in range(1):
             clencomment.remove({'userReviewId':item['userReviewId']})
             clencomment.insert(item)
         else:
-            print item['body'] + item['date'] + item['userReviewId'],item.get('isneg')
+        
+            #print item['body'] + item['date'] + item['userReviewId'],item.get('isneg')
+            if item.get('isneg') == False: 
+               foranalyse =  item['body'] + item['title']
+               foranalyse = foranalyse.replace('\n','')
+               foranalyse = foranalyse.lower()
+               foranalyse = foranalyse.replace(' ','')
+               print foranalyse       
             idList.append(item['userReviewId'])
             countn = countn + 1
 
