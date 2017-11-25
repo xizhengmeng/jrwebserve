@@ -66,7 +66,7 @@ def setOfWords2Vec(vocabList, inputSet):
             isnotintVoc.append(word)
 
     if len(isnotintVoc) != 0:
-       print 'isnotin',inputSet
+       print 'isnotin',''.join(inputSet)
     return returnVec
 
 def trainNB0(trainMatrix,trainCategory):
