@@ -141,10 +141,10 @@ def testModel(string):
 
     testEntry = seg_listnew
 
-    myVocabList = numpy.load("t.npy").tolist()
-    p0V = numpy.load("a.npy")
-    p1V = numpy.load("b.npy")
-    pAb = numpy.load("c.npy")
+    myVocabList = numpy.load("bayes/t.npy").tolist()
+    p0V = numpy.load("bayes/a.npy")
+    p1V = numpy.load("bayes/b.npy")
+    pAb = numpy.load("bayes/c.npy")
 
     thisDoc = array(setOfWords2Vec(myVocabList, testEntry))
     # print string,'classified as: ',classifyNB(thisDoc,p0V,p1V,pAb)
