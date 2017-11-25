@@ -57,10 +57,16 @@ def createVocabList(dataSet):
 
 def setOfWords2Vec(vocabList, inputSet):
     returnVec = [0]*len(vocabList)
+    isnotintVoc = []
     for word in inputSet:
         if word in vocabList:
             returnVec[vocabList.index(word)] = 1
         # else: print "the word: %s is not in my Vocabulary!" % word
+        else:
+            isnotintVoc.append(word)
+
+    if len(isnotintVoc) != 0:
+       print 'isnotin',inputSet
     return returnVec
 
 def trainNB0(trainMatrix,trainCategory):
@@ -141,7 +147,7 @@ def testModel(string):
     pAb = numpy.load("c.npy")
 
     thisDoc = array(setOfWords2Vec(myVocabList, testEntry))
-    print string,'classified as: ',classifyNB(thisDoc,p0V,p1V,pAb)
+    # print string,'classified as: ',classifyNB(thisDoc,p0V,p1V,pAb)
     return classifyNB(thisDoc,p0V,p1V,pAb)
 
 def textParse(bigString):    #input is big string, #output is word list

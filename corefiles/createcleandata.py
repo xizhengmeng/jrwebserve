@@ -4,6 +4,7 @@
 import os,sys
 import pymongo
 import re
+from bayes.bayes import *
 
 reload(sys)
 sys.setdefaultencoding( "utf-8" )
@@ -70,6 +71,18 @@ for item in dbs:
           print 'clencomment insert new ' + item['date'] + body
           forsearch = body + item['title']
           item['forsearch'] = forsearch
+
+          if type(forsearch) == type(None):
+              continue
+
+          mode = testModel(forsearch)
+
+          item['hasanalyse'] = True
+          if mode == 1:
+              item['isneg'] = True
+          else:
+              item['isneg'] = False
+
           clencomment.save(item)
           idList.append(item['userReviewId'])
 
