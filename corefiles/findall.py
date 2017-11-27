@@ -19,7 +19,7 @@ clencomment = mydb.CleanComment
 idList = []
 countn = 0
 for i in range(30):
-    dbs = clencomment.find({}).limit(1000).skip(i*1000)
+    dbs = clencomment.find({'isneg':True}).sort([('date', -1)]).limit(1000).skip(i*1000)
     
     now_time = datetime.datetime.now()
     now_time_string = now_time.strftime('%Y-%m-%d')
@@ -50,7 +50,7 @@ for i in range(30):
         else:
         
             #print item['body'] + item['date'] + item['userReviewId'],item.get('isneg')
-            if item.get('isneg') == False: 
+            if item.get('isneg') == True:
                foranalyse =  item['body'] + item['title']
                foranalyse = foranalyse.replace('\n','')
                foranalyse = foranalyse.lower()
