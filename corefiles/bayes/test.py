@@ -5,14 +5,14 @@ import os,sys
 from bayes import *
 # testingNB()
 
-flist = open('negtest.txt','r').read().split('\n')
-# flist = open('postest.txt','r').read().split('\n')
+# flist = open('negtest.txt','r').read().split('\n')
+flist = open('postest.txt','r').read().split('\n')
 
 count = 0
 
 for line in flist:
 	mode = testModel(line)
-	if mode == 0:
+	if mode == 1:
 		count = count + 1
 
 print '\n'
