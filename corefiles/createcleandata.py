@@ -52,7 +52,7 @@ clencomment = mydb.CleanComment
 #clencomment.remove({})
 #sys.exit(1)
 
-cdbs = clencomment.find({})
+cdbs = clencomment.find({}).sort([('date', -1)])
 
 idList = []
 

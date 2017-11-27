@@ -60,13 +60,13 @@ def setOfWords2Vec(vocabList, inputSet):
     isnotintVoc = []
     for word in inputSet:
         if word in vocabList:
-            returnVec[vocabList.index(word)] = 1
+            returnVec[vocabList.index(word)] += 1
         # else: print "the word: %s is not in my Vocabulary!" % word
         else:
             isnotintVoc.append(word)
 
     if len(isnotintVoc) != 0:
-       print 'isnotin',''.join(inputSet)
+       print 'isnotIn',''.join(inputSet)
     return returnVec
 
 def trainNB0(trainMatrix,trainCategory):
