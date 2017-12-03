@@ -6,6 +6,8 @@ from bayes import *
 # testingNB()
 
 abpath = sys.path[0] + '/'
+if 'bayes/' not in abpath:
+	abpath = abpath+'bayes/'
 
 # flist = open(abpath+'negtest.txt','r').read().split('\n')
 

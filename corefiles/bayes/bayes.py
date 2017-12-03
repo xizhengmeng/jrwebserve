@@ -12,6 +12,8 @@ reload(sys)
 sys.setdefaultencoding( "utf-8" )
 
 abpath = sys.path[0] + '/'
+if 'bayes/' not in abpath:
+	abpath = abpath+'bayes/'
 jieba.load_userdict(abpath+'customdict.txt')
 
 def translate(str):
@@ -124,7 +126,8 @@ def testingNB():
         trainMat.append(setOfWords2Vec(myVocabList, postinDoc))
     p0V,p1V,pAb = trainNB0(array(trainMat),array(listClasses))
 
-    abpath = sys.path[0] + '/'
+    if 'bayes/' not in abpath:
+	   abpath = abpath+'bayes/'
     numpy.save(abpath+"t.npy", myVocabList)
     numpy.save(abpath+"a.npy", p0V)
     numpy.save(abpath+"b.npy", p1V)
