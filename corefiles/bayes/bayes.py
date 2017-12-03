@@ -6,10 +6,21 @@ Created on Oct 19, 2010
 '''
 from numpy import *
 import jieba,sys
-import numpy
+import numpy,re
 
 reload(sys)
 sys.setdefaultencoding( "utf-8" )
+
+abpath = sys.path[0] + '/'
+jieba.load_userdict(abpath+'customdict.txt')
+
+def translate(str):
+    line = str.strip().decode('utf-8', 'ignore')  # 处理前进行相关的处理，包括转换成Unicode等
+    p2 = re.compile(ur'[^\u4e00-\u9fa5]')  # 中文的编码范围是：\u4e00到\u9fa5
+    zh = " ".join(p2.split(line)).strip()
+    zh = ",".join(zh.split())
+    outStr = zh  # 经过相关处理后得到中文的文本
+    return outStr
 
 def loadDataEnglishSet():
     postingList=[['my', 'dog', 'has', 'flea', 'problems', 'help', 'please'],
@@ -22,17 +33,19 @@ def loadDataEnglishSet():
     return postingList,classVec
 
 def loadDataSet():
-    
-    jieba.load_userdict('customdict.txt')
+
+    # abpath = sys.path[0] + '/'
+    # jieba.load_userdict(abpath+'customdict.txt')
 
     postingList = []
     classVec = []
 
-    neglist = open('neg.txt').read().split('\n')
-    poslist = open('pos.txt').read().split('\n')
+    neglist = open(abpath+'neg.txt').read().split('\n')
+    poslist = open(abpath+'pos.txt').read().split('\n')
 
     for line in neglist:
-        seg_list = jieba.cut(line)
+        newline = translate(line)
+        seg_list = jieba.cut(newline)
         seg_listnew = []
         for seg in seg_list:
             seg_listnew.append(seg)
@@ -40,7 +53,8 @@ def loadDataSet():
         classVec.append(1)
 
     for line in poslist:
-        seg_list = jieba.cut(line)
+        newline = translate(line)
+        seg_list = jieba.cut(newline)
         seg_listnew = []
         for seg in seg_list:
             seg_listnew.append(seg)
@@ -66,7 +80,8 @@ def setOfWords2Vec(vocabList, inputSet):
             isnotintVoc.append(word)
 
     if len(isnotintVoc) != 0:
-       print 'isnotIn',''.join(inputSet)
+       # print 'isnotIn',''.join(isnotintVoc)
+       print 'isnotIn','/'.join(isnotintVoc),'*******','/'.join(inputSet)
     return returnVec
 
 def trainNB0(trainMatrix,trainCategory):
@@ -108,11 +123,12 @@ def testingNB():
     for postinDoc in listOPosts:
         trainMat.append(setOfWords2Vec(myVocabList, postinDoc))
     p0V,p1V,pAb = trainNB0(array(trainMat),array(listClasses))
-    
-    numpy.save("t.npy", myVocabList)
-    numpy.save("a.npy", p0V)
-    numpy.save("b.npy", p1V)
-    numpy.save("c.npy", pAb)
+
+    abpath = sys.path[0] + '/'
+    numpy.save(abpath+"t.npy", myVocabList)
+    numpy.save(abpath+"a.npy", p0V)
+    numpy.save(abpath+"b.npy", p1V)
+    numpy.save(abpath+"c.npy", pAb)
 
      
     # testEntry = ['love', 'my', 'dalmation']
@@ -133,6 +149,7 @@ def testingNB():
 def testModel(string):
     # testline = 'ipad看不到qq合作登陆，登陆不了，望修复ipad看不到qq合作登陆，登陆不了，望修复'
     testline = string
+
     seg_list = jieba.cut(testline)
 
     seg_listnew = []
@@ -141,10 +158,11 @@ def testModel(string):
 
     testEntry = seg_listnew
 
-    myVocabList = numpy.load("bayes/t.npy").tolist()
-    p0V = numpy.load("bayes/a.npy")
-    p1V = numpy.load("bayes/b.npy")
-    pAb = numpy.load("bayes/c.npy")
+    abpath = sys.path[0] + '/'
+    myVocabList = numpy.load(abpath + "t.npy").tolist()
+    p0V = numpy.load(abpath + "a.npy")
+    p1V = numpy.load(abpath + "b.npy")
+    pAb = numpy.load(abpath + "c.npy")
 
     thisDoc = array(setOfWords2Vec(myVocabList, testEntry))
     # print string,'classified as: ',classifyNB(thisDoc,p0V,p1V,pAb)

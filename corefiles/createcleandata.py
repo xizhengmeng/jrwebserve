@@ -10,7 +10,7 @@ reload(sys)
 sys.setdefaultencoding( "utf-8" )
 
 def checkIfisuseful(string,date):
-    if len(body) > 10 and len(body) < 150:
+    if len(string) > 10 and len(string) < 150:
         unitext = string
         if type(string) == type(''):
             unitext = unicode(string, 'utf-8')
