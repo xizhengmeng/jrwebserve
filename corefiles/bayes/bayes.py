@@ -17,6 +17,10 @@ if 'bayes/' not in abpath:
 jieba.load_userdict(abpath+'customdict.txt')
 
 def translate(str):
+    str = str.replace(',','')
+    str = str.replace('。','')
+    str = str.replace('！','')
+    str = str.replace('!','')
     line = str.strip().decode('utf-8', 'ignore')  # 处理前进行相关的处理，包括转换成Unicode等
     p2 = re.compile(ur'[^\u4e00-\u9fa5]')  # 中文的编码范围是：\u4e00到\u9fa5
     zh = " ".join(p2.split(line)).strip()
