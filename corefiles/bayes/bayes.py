@@ -126,8 +126,6 @@ def testingNB():
         trainMat.append(setOfWords2Vec(myVocabList, postinDoc))
     p0V,p1V,pAb = trainNB0(array(trainMat),array(listClasses))
 
-    if 'bayes/' not in abpath:
-	   abpath = abpath+'bayes/'
     numpy.save(abpath+"t.npy", myVocabList)
     numpy.save(abpath+"a.npy", p0V)
     numpy.save(abpath+"b.npy", p1V)
@@ -161,7 +159,6 @@ def testModel(string):
 
     testEntry = seg_listnew
 
-    abpath = sys.path[0] + '/'
     myVocabList = numpy.load(abpath + "t.npy").tolist()
     p0V = numpy.load(abpath + "a.npy")
     p1V = numpy.load(abpath + "b.npy")
