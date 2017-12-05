@@ -49,6 +49,8 @@ def searchComment(searchkey, sorekey, pageindex, pagesize,lastesttime,isneg):
 
     skipnumber = pagesize * pageindex
 
+    logger.info(skipnumber)
+
     daysl = 0
     dbs = []
 
