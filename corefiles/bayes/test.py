@@ -5,15 +5,23 @@ import os,sys
 from bayes import *
 # testingNB()
 
-# flist = open('negtest.txt','r').read().split('\n')
-flist = open('postest.txt','r').read().split('\n')
+abpath = sys.path[0] + '/'
+if 'bayes/' not in abpath:
+	abpath = abpath+'bayes/'
+
+# flist = open(abpath+'negtest.txt','r').read().split('\n')
+
+flist = open(abpath + 'postest.txt','r').read().split('\n')
 
 count = 0
 
 for line in flist:
-	mode = testModel(line)
+	newlinw = translate(line)
+	mode = testModel(newlinw)
 	if mode == 1:
 		count = count + 1
+		print newlinw
+
 
 print '\n'
 print '\n'
