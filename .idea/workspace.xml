@@ -79,7 +79,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="createcleandata.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="createcleandata.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/corefiles/createcleandata.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="237">
@@ -88,6 +88,16 @@
                 <element signature="e#38#51#0" expanded="true" />
                 <marker date="1512792777000" expanded="true" signature="2229:2308" ph="..." />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="test.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/corefiles/bayes/test.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="45">
+              <caret line="5" column="0" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -735,16 +745,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/corefiles/bayes/test.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="46">
-          <caret line="5" column="0" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
-          <folding>
-            <element signature="e#37#50#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/corefiles/bayes/neg.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="466">
@@ -799,6 +799,14 @@
             <element signature="e#38#51#0" expanded="true" />
             <marker date="1512792777000" expanded="true" signature="2229:2308" ph="..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/corefiles/bayes/test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="5" column="0" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
