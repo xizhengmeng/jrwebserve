@@ -13,23 +13,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="corefunction.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/corefiles/corefunction.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="60">
-              <caret line="4" column="19" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
-              <folding>
-                <element signature="e#37#73#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="bayes.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="bayes.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/corefiles/bayes/bayes.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="326">
-              <caret line="93" column="56" lean-forward="false" selection-start-line="93" selection-start-column="56" selection-end-line="93" selection-end-column="56" />
+            <state relative-caret-position="144">
+              <caret line="135" column="12" lean-forward="false" selection-start-line="135" selection-start-column="4" selection-end-line="135" selection-end-column="12" />
               <folding>
                 <element signature="e#72#91#0" expanded="true" />
               </folding>
@@ -40,8 +28,8 @@
       <file leaf-file-name="customdict.txt" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/corefiles/bayes/customdict.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="316">
-              <caret line="56" column="4" lean-forward="false" selection-start-line="56" selection-start-column="4" selection-end-line="56" selection-end-column="4" />
+            <state relative-caret-position="422">
+              <caret line="87" column="0" lean-forward="true" selection-start-line="87" selection-start-column="0" selection-end-line="87" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -50,21 +38,19 @@
       <file leaf-file-name="pos.txt" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/corefiles/bayes/pos.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="391">
-              <caret line="2656" column="20" lean-forward="false" selection-start-line="2656" selection-start-column="20" selection-end-line="2656" selection-end-column="20" />
+            <state relative-caret-position="437">
+              <caret line="2729" column="0" lean-forward="true" selection-start-line="2729" selection-start-column="0" selection-end-line="2729" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="test.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/corefiles/bayes/test.py">
+      <file leaf-file-name="neg.txt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/corefiles/bayes/neg.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="46">
-              <caret line="5" column="0" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
-              <folding>
-                <element signature="e#37#50#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="466">
+              <caret line="1646" column="0" lean-forward="true" selection-start-line="1646" selection-start-column="0" selection-end-line="1646" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -72,7 +58,7 @@
       <file leaf-file-name="bayesanalyse.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/corefiles/bayesanalyse.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-320">
+            <state relative-caret-position="30">
               <caret line="2" column="0" lean-forward="true" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
               <folding>
                 <element signature="e#25#39#0" expanded="true" />
@@ -84,7 +70,7 @@
       <file leaf-file-name="CoreSearch.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/jrweb/CoreFunction/CoreSearch.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1022">
+            <state relative-caret-position="1065">
               <caret line="71" column="39" lean-forward="false" selection-start-line="71" selection-start-column="39" selection-end-line="71" selection-end-column="59" />
               <folding>
                 <element signature="e#25#51#0" expanded="true" />
@@ -93,34 +79,14 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="postest.txt" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/corefiles/bayes/postest.txt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="122">
-              <caret line="48" column="0" lean-forward="true" selection-start-line="48" selection-start-column="0" selection-end-line="48" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="negtest.txt" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/corefiles/bayes/negtest.txt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="375">
-              <caret line="149" column="49" lean-forward="false" selection-start-line="149" selection-start-column="49" selection-end-line="149" selection-end-column="49" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="createcleandata.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="createcleandata.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/corefiles/createcleandata.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-374">
-              <caret line="12" column="38" lean-forward="false" selection-start-line="12" selection-start-column="38" selection-end-line="12" selection-end-column="38" />
+            <state relative-caret-position="237">
+              <caret line="42" column="32" lean-forward="false" selection-start-line="42" selection-start-column="32" selection-end-line="42" selection-end-column="32" />
               <folding>
                 <element signature="e#38#51#0" expanded="true" />
-                <marker date="1512270648000" expanded="true" signature="2216:2295" ph="..." />
+                <marker date="1512792777000" expanded="true" signature="2229:2308" ph="..." />
               </folding>
             </state>
           </provider>
@@ -130,8 +96,13 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
+      <find>靠谱</find>
+      <find>价格比</find>
+      <find>京东品质</find>
       <find>之前在京东买东</find>
+      <find>年开始到如今只能说京东等级划分很强</find>
       <find>remove</find>
+      <find>setOfWords2Vec</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -140,9 +111,12 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/corefiles/bayes/pos.txt" />
         <option value="$PROJECT_DIR$/corefiles/bayes/test.py" />
+        <option value="$PROJECT_DIR$/corefiles/bayes/customdict.txt" />
+        <option value="$PROJECT_DIR$/corefiles/bayes/neg.txt" />
+        <option value="$PROJECT_DIR$/corefiles/bayes/pos.txt" />
         <option value="$PROJECT_DIR$/corefiles/bayes/bayes.py" />
+        <option value="$PROJECT_DIR$/corefiles/createcleandata.py" />
       </list>
     </option>
   </component>
@@ -678,7 +652,7 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="6" selection-end-column="15" />
           <folding>
-            <element signature="e#37#50#0" expanded="true" />
+            <element signature="e#37#50#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -703,7 +677,7 @@
         <state relative-caret-position="285">
           <caret line="19" column="0" lean-forward="false" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="49" />
           <folding>
-            <element signature="e#24#38#0" expanded="true" />
+            <element signature="e#24#38#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -726,37 +700,14 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/corefiles/bayes/neg.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="480">
-          <caret line="1627" column="0" lean-forward="true" selection-start-line="1627" selection-start-column="0" selection-end-line="1627" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/corefiles/bayes/python :root:jdjr:jdjrweb:corefiles:createcleandat" />
     <entry file="file://$PROJECT_DIR$/corefiles/corefunction.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
           <caret line="4" column="19" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
           <folding>
-            <element signature="e#37#73#0" expanded="true" />
+            <element signature="e#37#73#0" expanded="false" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/corefiles/bayes/customdict.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="316">
-          <caret line="56" column="4" lean-forward="false" selection-start-line="56" selection-start-column="4" selection-end-line="56" selection-end-column="4" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/corefiles/bayes/postest.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="122">
-          <caret line="48" column="0" lean-forward="true" selection-start-line="48" selection-start-column="0" selection-end-line="48" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -768,42 +719,19 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/corefiles/createcleandata.py">
+    <entry file="file://$PROJECT_DIR$/corefiles/bayes/customdict.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-374">
-          <caret line="12" column="38" lean-forward="false" selection-start-line="12" selection-start-column="38" selection-end-line="12" selection-end-column="38" />
-          <folding>
-            <element signature="e#38#51#0" expanded="true" />
-            <marker date="1512270648000" expanded="true" signature="2216:2295" ph="..." />
-          </folding>
+        <state relative-caret-position="422">
+          <caret line="87" column="0" lean-forward="true" selection-start-line="87" selection-start-column="0" selection-end-line="87" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/corefiles/bayes/pos.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="2656" column="20" lean-forward="false" selection-start-line="2656" selection-start-column="20" selection-end-line="2656" selection-end-column="20" />
+        <state relative-caret-position="437">
+          <caret line="2729" column="0" lean-forward="true" selection-start-line="2729" selection-start-column="0" selection-end-line="2729" selection-end-column="0" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/jrweb/CoreFunction/CoreSearch.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1022">
-          <caret line="71" column="39" lean-forward="false" selection-start-line="71" selection-start-column="39" selection-end-line="71" selection-end-column="59" />
-          <folding>
-            <element signature="e#25#51#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/corefiles/bayesanalyse.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-320">
-          <caret line="2" column="0" lean-forward="true" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
-          <folding>
-            <element signature="e#25#39#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -812,17 +740,64 @@
         <state relative-caret-position="46">
           <caret line="5" column="0" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
           <folding>
-            <element signature="e#37#50#0" expanded="true" />
+            <element signature="e#37#50#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/corefiles/bayes/neg.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="466">
+          <caret line="1646" column="0" lean-forward="true" selection-start-line="1646" selection-start-column="0" selection-end-line="1646" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/corefiles/bayes/postest.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="122">
+          <caret line="48" column="0" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="139" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jrweb/CoreFunction/CoreSearch.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1065">
+          <caret line="71" column="39" lean-forward="false" selection-start-line="71" selection-start-column="39" selection-end-line="71" selection-end-column="59" />
+          <folding>
+            <element signature="e#25#51#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/corefiles/bayes/bayes.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="326">
-          <caret line="93" column="56" lean-forward="false" selection-start-line="93" selection-start-column="56" selection-end-line="93" selection-end-column="56" />
+        <state relative-caret-position="144">
+          <caret line="135" column="12" lean-forward="false" selection-start-line="135" selection-start-column="4" selection-end-line="135" selection-end-column="12" />
           <folding>
             <element signature="e#72#91#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/corefiles/bayesanalyse.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="0" lean-forward="true" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+          <folding>
+            <element signature="e#25#39#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/corefiles/createcleandata.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="237">
+          <caret line="42" column="32" lean-forward="false" selection-start-line="42" selection-start-column="32" selection-end-line="42" selection-end-column="32" />
+          <folding>
+            <element signature="e#38#51#0" expanded="true" />
+            <marker date="1512792777000" expanded="true" signature="2229:2308" ph="..." />
           </folding>
         </state>
       </provider>

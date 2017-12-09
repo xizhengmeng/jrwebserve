@@ -126,6 +126,28 @@ def bagOfWords2VecMN(vocabList, inputSet):
             returnVec[vocabList.index(word)] += 1
     return returnVec
 
+def numberOfcanotUse(vocabList, inputSet):
+    count = 0
+    for word in inputSet:
+        if word not in vocabList:
+           count = count + 1
+    return count
+
+def isUseful(content):
+    myVocabList = numpy.load(abpath + "t.npy").tolist()
+    newline = translate(content)
+    seg_list = jieba.cut(newline)
+    seg_listnew = []
+    for seg in seg_list:
+        if seg not in stopwords:
+           seg_listnew.append(seg)
+
+    count = numberOfcanotUse(myVocabList,seg_listnew)
+    if count >= 3:
+        return False
+    else:
+        return True
+
 def testingNB():
     listOPosts,listClasses = loadDataSet()
     myVocabList = createVocabList(listOPosts)
@@ -141,7 +163,6 @@ def testingNB():
 
      
     # testEntry = ['love', 'my', 'dalmation']
-
     # testline = '京东还是不错'
 
     # seg_list = jieba.cut(testline)

@@ -39,8 +39,8 @@ def checkIfisuseful(string,date):
                 print string
                 print '*******************'
                 return False
-        return True
 
+        return isUseful(unitext)
     else:
         return False
 
