@@ -16,6 +16,8 @@ if 'bayes/' not in abpath:
 	abpath = abpath+'bayes/'
 jieba.load_userdict(abpath+'customdict.txt')
 
+stopwords = open(abpath+'stopwords.txt','r').read().split('\n')
+
 def translate(str):
     str = str.replace(',','')
     str = str.replace('。','')
@@ -54,7 +56,8 @@ def loadDataSet():
         seg_list = jieba.cut(newline)
         seg_listnew = []
         for seg in seg_list:
-            seg_listnew.append(seg)
+            if seg not in stopwords:
+               seg_listnew.append(seg)
         postingList.append(seg_listnew)
         classVec.append(1)
 
@@ -63,7 +66,8 @@ def loadDataSet():
         seg_list = jieba.cut(newline)
         seg_listnew = []
         for seg in seg_list:
-            seg_listnew.append(seg)
+            if seg not in stopwords:
+               seg_listnew.append(seg)
         postingList.append(seg_listnew)
         classVec.append(0) 
         
@@ -153,13 +157,18 @@ def testingNB():
 
 def testModel(string):
     # testline = 'ipad看不到qq合作登陆，登陆不了，望修复ipad看不到qq合作登陆，登陆不了，望修复'
-    testline = string
+
+    testline = re.sub("[\s+\.\!\/_,$%^*(+\"\']+|[+——！，！。？、~@#￥%……&*（）]+",'',string)
+    testline = testline.replace('！','')
+    testline = testline.replace('，','')
+    testline = testline.replace('。','')
 
     seg_list = jieba.cut(testline)
 
     seg_listnew = []
     for item in seg_list:
-        seg_listnew.append(item)
+        if item not in stopwords:
+               seg_listnew.append(item)
 
     testEntry = seg_listnew
 
